@@ -3,7 +3,7 @@
 // Website related settings
 const settings = {
   isSplash: true, // Change this to true if you want to use the splash screen.
-  useCustomCursor: true, // Change this to false if you want the good'ol cursor
+  useCustomCursor: false, // Change this to false if you want the good'ol cursor
   googleTrackingID: "UA-174238252-2",
 };
 
@@ -11,8 +11,8 @@ const settings = {
 const greeting = {
   title: "Hello 👋.",
   title2: "Shane",
-  logo_name: "harry.k()",
-  nickname: "harry / picleric",
+  logo_name: "shane.w()",
+  nickname: "shane / gonzo",
   full_name: "Shane Wilson",
   subTitle:
     "DevOps Engineer, Open Source Enthusiast 🔥 Always learning.",
@@ -275,31 +275,28 @@ const skills = {
 const degrees = {
   degrees: [
     {
-      title: "Shantilal Shah Engineering College",
-      subtitle: "Bachelor in Information Technology",
-      logo_path: "ssec.png",
-      alt_name: "SSEC",
-      duration: "2021 - Present",
+      title: "Technological University Dublin - Grangegorman",
+      subtitle: "Bachelor of Science (Hons) in Computer Science - TU856",
+      logo_path: "tud.png",
+      alt_name: "TUD",
+      duration: "2020 - Present",
       descriptions: [
-        "⚡ I'm currently pursuing my bachelors in Information Technology."
-        // "⚡ I have studied core subjects like Data Structures, DBMS, Networking, Security, etc.",
-        // "⚡ I have also completed various online courses for Backend , Web , Mobile App Development, etc.",
-        // "⚡ I have implemented several projects based on what I've leart under my Computer Engineering course. ",
+        "⚡ I'm currently pursuing my bachelors degree in Computer Science.",
+        "⚡ I have studied core subjects like Data Structures, Algorithms, Web Development, Programming, Operating Systems, etc.",
+        "⚡ I have implemented several projects based on what I've learned in my course. ",
       ],
-      website_link: "http://www.ssgec.ac.in/",
+      website_link: "https://www.tudublin.ie/",
     },
     {
-      title: "Dr. S. & S. S. Ghandhy College Of Engineering & Technology",
-      subtitle: "Diploma in Information Technology",
-      logo_path: "ssgandhy.png",
-      alt_name: "SSGC",
-      duration: "2018 - 2021",
+      title: "Plunket College of Further Education",
+      subtitle: "Leaving Certificate",
+      logo_path: "plunket.png",
+      alt_name: "PLUNKET",
+      duration: "2010 - 2012",
       descriptions: [
-        "⚡ I have studied core subjects like Data Structures, DBMS, Networking, Security, etc.",
-        "⚡ I have also completed various online courses for Backend , Web , Mobile App Development, etc.",
-        "⚡ I have implemented several projects based on what I've leart under my Computer Engineering course. ",
+        "⚡ I received 410 points in my leaving certificate.",
       ],
-      website_link: "http://www.ssgc.cteguj.in/",
+      website_link: "https://www.plunketcollege.ie/",
     },
   ],
 };
@@ -307,9 +304,9 @@ const degrees = {
 const certifications = {
   certifications: [
     {
-      title: "M0001: MongoDB Basics",
-      subtitle: "MongoDB University",
-      logo_path: "mongo.png",
+      title: "ECDL",
+      subtitle: "Finglas Training Centre CDETB",
+      logo_path: "edcl.png",
       certificate_link:
         "https://drive.google.com/file/d/12se6bMep48WXA1PlizTBAgCnW0GXM6wq/view?usp=sharing",
       alt_name: "MongoDB University",
@@ -660,8 +657,8 @@ const projects = {
     },
     {
       id: "5",
-      name: "harikanani.github.io",
-      url: "https://github.com/harikanani/harikanani.github.io",
+      name: "shanewilson.ie",
+      url: "https://github.com/GonzoTheDev/Portfolio",
       description:
         "A Personal Portfolio Website that showcases my work and experience. which is hosted on Github Pages.",
       languages: [
