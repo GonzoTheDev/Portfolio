@@ -10,37 +10,37 @@ const settings = {
 //Home Page
 const greeting = {
   title: "Hello 👋.",
-  title2: "Harikrushn",
+  title2: "Shane",
   logo_name: "harry.k()",
   nickname: "harry / picleric",
-  full_name: "Harikrushn Kanani",
+  full_name: "Shane Wilson",
   subTitle:
-    "Full Stack Developer, Open Source Enthusiast 🔥. Always learning.",
+    "DevOps Engineer, Open Source Enthusiast 🔥 Always learning.",
   resumeLink:
     "https://docs.google.com/document/d/1A_jWRG74Rst427tg1izLa6vRXclS9_9F856jWJPJlDY/edit?usp=sharing",
-  mail: "mailto:hkanani191@gmail.com",
+  mail: "mailto:gonzosoftware0@gmail.com",
 };
 
 const socialMediaLinks = {
   /* Your Social Media Link */
-  github: "https://github.com/harikanani",
-  linkedin: "https://www.linkedin.com/in/harikrushn-kanani/",
-  gmail: "hkanani191@gmail.com",
-  gitlab: "https://gitlab.com/harikanani",
-  facebook: "https://www.facebook.com/harikrishan.kanani/",
-  twitter: "https://twitter.com/Harikrushn9",
-  instagram: "https://www.instagram.com/hari_kanani_/",
+  github: "https://github.com/GonzoTheDev",
+  linkedin: "https://www.linkedin.com/in/shane-wilson-dublin/",
+  gmail: "gonzosoftware0@gmail.com",
+  gitlab: "https://gitlab.com/GonzoTheDev",
+  //facebook: "https://www.facebook.com/harikrishan.kanani/",
+  //twitter: "https://twitter.com/Harikrushn9",
+  instagram: "https://www.instagram.com/shaneb343/",
 };
 
 const skills = {
   data: [
     {
-      title: "Full Stack Development",
+      title: "DevOps Engineer",
       fileName: "FullStackImg",
       skills: [
         "⚡ Develop highly interactive Front end / User Interfaces for your web and mobile applications",
         "⚡ Building responsive website front end using ReactJS",
-        "⚡ Developing mobile applications using Flutter and Android",
+        "⚡ Developing mobile applications using Flutter and React Native",
         "⚡ Creating application backend in Node, Express & Flask",
         "⚡ Integration of third party services such as Firebase/ AWS / Digital Ocean"
       ],
