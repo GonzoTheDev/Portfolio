@@ -4,7 +4,7 @@
 const settings = {
   isSplash: true, // Change this to true if you want to use the splash screen.
   useCustomCursor: false, // Change this to false if you want the good'ol cursor
-  googleTrackingID: "UA-174238252-2",
+  googleTrackingID: "",
 };
 
 //Home Page
@@ -28,7 +28,7 @@ const socialMediaLinks = {
   gmail: "gonzosoftware0@gmail.com",
   gitlab: "https://gitlab.com/GonzoTheDev",
   //facebook: "https://www.facebook.com/harikrishan.kanani/",
-  //twitter: "https://twitter.com/Harikrushn9",
+  twitter: "https://twitter.com/GonzoTheDev",
   instagram: "https://www.instagram.com/shaneb343/",
 };
 
@@ -308,21 +308,21 @@ const certifications = {
       subtitle: "Finglas Training Centre CDETB",
       logo_path: "edcl.png",
       certificate_link:
-        "https://drive.google.com/file/d/12se6bMep48WXA1PlizTBAgCnW0GXM6wq/view?usp=sharing",
+        "https://drive.google.com/drive/folders/1qlS7zen-TnixKnLpjWrF_fic1z7SKIE0?usp=sharing",
       alt_name: "MongoDB University",
       // color_code: "#2AAFED",
+      color_code: "#2AAFED",
+    },
+    {
+      title: "Python",
+      subtitle: "Data Flair",
+      logo_path: "dataflair.png",
+      certificate_link:
+        "https://drive.google.com/file/d/1bFyb70slgE1b2deqFqReh0cLzehDGGHQ/view?usp=sharing",
+      alt_name: "dataflair",
       color_code: "#47A048",
     },
-    {
-      title: "Hackathon",
-      subtitle: "Hack The Mountains",
-      logo_path: "hackathon1.svg",
-      certificate_link:
-        "https://drive.google.com/file/d/1Y-HT1flWDfeyfnfqVr3ubNgGIcnuUEYt/view?usp=sharing",
-      alt_name: "hackathon",
-      color_code: "#E2405F",
-    },
-    {
+    /*{
       title: "A300: Atlas Security",
       subtitle: "MongoDB University",
       logo_path: "mongo.png",
@@ -330,18 +330,18 @@ const certifications = {
         "https://drive.google.com/file/d/12u_tkvhgB-K2TIm-RDdJOwYbQ9ccqiqA/view?usp=sharing",
       alt_name: "MongoDB University",
       // color_code: "#F6B808",
-      color_code: "#47A048",
-    },
+      color_code: "#fe0037",
+    },*/
     {
-      title: "Cyber Security & Cyber Forensics",
-      subtitle: "Workshop at IIT Bombay",
-      logo_path: "iit.png",
+      title: "Data Structures & Algorithms",
+      subtitle: "Data Flair",
+      logo_path: "dataflair.png",
       certificate_link:
-        "https://drive.google.com/file/d/12uAdjQC5LfrB1ODdxqIY181ugyyQhl-I/view?usp=sharing",
+        "https://drive.google.com/file/d/1xnUwp8ZjAFPmCc3MIq_wAck9L7ckIS68/view?usp=sharing",
       alt_name: "Workshop",
-      color_code: "#2AAFED",
+      color_code: "#fe0037",
     },
-    {
+    /*{
       title: "MLH Local Hack Day: Build",
       subtitle: "Major League Hacking",
       logo_path: "mlh-logo.svg",
@@ -368,7 +368,7 @@ const certifications = {
       alt_name: "Postman",
       // color_code: "#f36c3d",
       color_code: "#fffbf3",
-    },
+    },*/
     // color_code: "#8C151599",
     // color_code: "#7A7A7A",
     // color_code: "#0C9D5899",
@@ -386,7 +386,7 @@ const experience = {
   title: "Experience",
   subtitle: "Work, Internship and Volunteership",
   description:
-    "I've completed one internship. I've mostly done projects on my own and I am actively looking for internships. I love organizing workshops to share my knowledge with others.",
+    "I started out by teaching myself web development while working as a security officer back in 2014 by building web applications for the security company I was working for. Eventually they officially hired me as a web developer in 2016 and I worked in that role for 2 years before returning to university. I've mostly done personal projects on the side while in university and I am actively looking for a six month work placement/internship for January 2023. I also have some volunteering experience working as the health and safety officer for the TU Dublin live music society since 2020, and I have volunteered for Swords Tidy Towns in the past.",
   header_image_path: "experience.svg",
   sections: [
     {
@@ -510,7 +510,7 @@ const projectsHeader = {
 const contactPageData = {
   contactSection: {
     title: "Contact Me",
-    profile_image_path: "harikrushn.jpg",
+    profile_image_path: "shane.jpg",
     description:
       "You can contact me at the places mentioned below. I will try to get back to you as fast as I can. ",
   },
@@ -518,7 +518,7 @@ const contactPageData = {
     title: "Blogs",
     subtitle:
       "I don't blog frequently but when I do something awesome, I do try to document it so it can be helpful to others. I write on Twitter.",
-    link: "https://twitter.com/Harikrushn9",
+    link: "https://twitter.com/GonzoTheDev",
     avatar_image_path: "blogs_image.svg",
   },
 };
