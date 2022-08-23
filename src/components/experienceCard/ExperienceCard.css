@@ -158,5 +158,6 @@
     margin-left: 14px;
     margin-right: 14px;
     text-align: justify;
+    white-space: pre-wrap;
   }
 }

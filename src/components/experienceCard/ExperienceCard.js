@@ -1,7 +1,7 @@
 import React from "react";
 import "./ExperienceCard.css";
 
-function ExperienceCard(props) {
+function ExperienceCard(props) { 
   const experience = props.experience;
   const theme = props.theme;
   return (
@@ -19,7 +19,7 @@ function ExperienceCard(props) {
           alt=""
         />
       </div>
-      <div className="experience-card-body-div">
+      <div className="experience-card-body-div" style={{whiteSpace: "pre-wrap"}}>
         <div className="experience-card-header-div">
           <div className="experience-card-heading-left">
             <h3 className="experience-card-title" style={{ color: theme.text }}>
@@ -57,8 +57,9 @@ function ExperienceCard(props) {
           className="experience-card-description"
           style={{ color: theme.text }}
         >
-          {experience["description"]}
+          {experience["description"]} 
         </p>
+        
       </div>
     </div>
   );

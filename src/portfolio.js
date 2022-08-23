@@ -44,7 +44,7 @@ const skills = {
         "⚡ Build software applications and packaging them using tools like npm & pip.",
         "⚡ CI/CD with tools such as Jenkins, GitLab, AWS CodePipeline.",
         "⚡ Experienced in containerization tools such as Docker and Kubernetes.",
-        "⚡ System and monitoring with Prometheus, ELK stack, Grafana."
+        "⚡ System and platform monitoring with Prometheus, ELK stack, Grafana."
       ],
       softwareSkills: [
         {
@@ -210,7 +210,7 @@ const skills = {
       skills: [
         "⚡ Experience working on multiple cloud platforms",
         "⚡ Experience hosting and managing websites",
-        "⚡ Experience with Continuous Integration",
+        "⚡ Experience with Continuous Integration/Continuous Deployment",
       ],
       softwareSkills: [
         {
@@ -395,33 +395,50 @@ const experience = {
       title: "Work Experience",
       experiences: [
         {
-          title: "Full Stack Developer (Intern)",
-          company: "Valora Infotech",
-          company_url: "https://valora-infotech.business.site/",
-          logo_path: "valora.jpg",
-          duration: "Oct 2020 - Mar 2021",
-          location: "Office",
+          title: "Full Stack Web & Andoird Developer/System Administrator",
+          company: "MCR Group",
+          company_url: "https://mcrgroup.ie",
+          logo_path: "group.png",
+          duration: "May 2016 - May 2018",
+          location: "Head Office",
           description:
-          `Train, manage and provide guidance to junior software development staff.
-          Work closely with the Project Manager and Team Leads on change request functions.
-          Develops new and maintains existing applications.
-          Increased productivity and problem-solving technics by 20%.
-          We primarily used PERN and MERN Stack. 80% of my work was doing backend development and the remaining 20% was DevOps-related tasks.
-          `,
-            // "I worked on the Dashboard project which helps users track their activities while using Walo Application. I also worked on Ocean Inventory Application and it's Admin panel Backend as well as on Ocean Inventory Admin Front-end using React and also worked on Walo Admin Backend.",
-          color: "#0071C5",
+          [
+          `
+Notable Projects
+
+mcrlogs.com - This was the very first project I created while working for MCR, originally it was a very basic website, the
+requirement was a clocking system, when a security officer performs their patrols they would scan QR codes that had been
+placed along their route, the QR code would be a link to a form on the website, they would fill out their name and any
+comments they may have had if there were any issues. This form submission would then be stored in a MySQL database and
+displayed in a dashboard for the managers to see along with the timestamp of the submission. The website was built using
+typical web technologies, PHP, HTML, CSS, Javascript and Boostrap Framework.
+
+Eventually I went on to develop the system so that instead of QR codes, we used NFC tags. The tags originally had a link to a
+form on the website but eventually I developed an android app called "MCR Proximity Patrol", so that the tags could be
+encoded with a unique identifier and the security officer would simply log into the app and tap the NFC tags along their patrol
+route without having to fill out any details. The app would log their name, timestamp and the ID of the NFC
+tag in the web server database and would then display in both the managers and clients dashboards in real time. I added many features to
+this project over the years and I would be glad to talk about them in more detail.
+
+cleanroomequipment.ie - A catalogue and quote website built using Magento 2.0. I implemented several custom plugins for
+this site so that it would provide quotes to customers for cleanroom equipment. This site had over 1,000 products. This site
+was built for MCR Engineering, another company under the MCR Group umbrella.
+
+mcrgroup.ie - The main business website for MCR Group. Built using Joomla and included creating some custom plugins such
+as for job postings and news.`
+          ],
+            color: "#0071C5",
         },
         {
-          title: "Full Stack Developer (Freelancer)",
-          company: "NightOwls",
-          company_url: "http://nightowls.company/",
-          logo_path: "nightowls.jpg",
-          duration: "Sep 2020 - Oct 2020",
-          location: "Work From Home",
+          title: "Control & Monitoring Supervisor / System Administrator / Junior Web Developer",
+          company: "MCR Security",
+          company_url: "https://mcrgroup.ie",
+          logo_path: "Security.png",
+          duration: "Jun 2014 - May 2016",
+          location: "Control Room",
           description:
-          `Work closely with the Client and Team on change request functions.
-          We Primarily used LAMP Stack. 40% of my work was doing backend development, 30% of my work was designing database schemas, and 30% of my work was on maintain hosting and user traffics on the website.
-          `,
+          `Responsibilities included:
+Ensuring staff were on time and on site for the start of their shifts, arranging cover when necessary.`,
             // "Created Front end of Yearn Financial Mutual Funds website. also degined simple web application for better user experience, designed DB Schemas as well.",
           color: "#ee3c26",
         }
