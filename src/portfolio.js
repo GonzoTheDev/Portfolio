@@ -38,11 +38,13 @@ const skills = {
       title: "DevOps Engineer",
       fileName: "FullStackImg",
       skills: [
-        "⚡ Develop highly interactive Front end / User Interfaces for your web and mobile applications",
-        "⚡ Building responsive website front end using ReactJS",
-        "⚡ Developing mobile applications using Flutter and React Native",
-        "⚡ Creating application backend in Node, Express & Flask",
-        "⚡ Integration of third party services such as Firebase/ AWS / Digital Ocean"
+        "⚡ Design DevOps pipelines and workflow architectures with diagrams.",
+        "⚡ Plan and manage projects with tools such as Jira & Confluence.",
+        "⚡ Knowledgable in version control systems such as Git and GitHub.",
+        "⚡ Build software applications and packaging them using tools like npm & pip.",
+        "⚡ CI/CD with tools such as Jenkins, GitLab, AWS CodePipeline.",
+        "⚡ Experienced in containerization tools such as Docker and Kubernetes.",
+        "⚡ System and monitoring with Prometheus, ELK stack, Grafana."
       ],
       softwareSkills: [
         {
@@ -130,13 +132,6 @@ const skills = {
             color: "#02569B",
           },
         },
-        {
-          skillName: "Dart",
-          fontAwesomeClassname: "simple-icons:dart",
-          style: {
-            color: "#29B0EE",
-          },
-        },
         // {
         //   skillName: "Visual Basic",
         //   fontAwesomeClassname: "simple-icons:dot-net",
@@ -159,10 +154,24 @@ const skills = {
           },
         },
         {
-          skillName: "Wordpress",
-          fontAwesomeClassname: "simple-icons:wordpress",
+          skillName: "Docker",
+          fontAwesomeClassname: "simple-icons:docker",
           style: {
             color: "#207297",
+          },
+        },
+        {
+          skillName: "Jenkins",
+          fontAwesomeClassname: "simple-icons:jenkins",
+          style: {
+            color: "#d13833",
+          },
+        },
+        {
+          skillName: "Prometheus",
+          fontAwesomeClassname: "simple-icons:prometheus",
+          style: {
+            color: "#df4f2b",
           },
         },
         {
@@ -182,13 +191,6 @@ const skills = {
         {
           skillName: "C",
           fontAwesomeClassname: "simple-icons:c",
-          style: {
-            color: "#E94E32",
-          },
-        },
-        {
-          skillName: "C++",
-          fontAwesomeClassname: "simple-icons:cplusplus",
           style: {
             color: "#E94E32",
           },
