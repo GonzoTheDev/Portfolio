@@ -427,7 +427,7 @@ was built for MCR Engineering, another company under the MCR Group umbrella.
 mcrgroup.ie - The main business website for MCR Group. Built using Joomla and included creating some custom plugins such
 as for job postings and news.`
           ],
-            color: "#0071C5",
+            color: "#4c4d6c",
         },
         {
           title: "Control & Monitoring Supervisor / System Administrator / Junior Web Developer",
@@ -440,7 +440,7 @@ as for job postings and news.`
           `Responsibilities included:
 Ensuring staff were on time and on site for the start of their shifts, arranging cover when necessary.`,
             // "Created Front end of Yearn Financial Mutual Funds website. also degined simple web application for better user experience, designed DB Schemas as well.",
-          color: "#ee3c26",
+          color: "#d14e52",
         }
       ],
     },
