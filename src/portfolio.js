@@ -17,17 +17,16 @@ const greeting = {
   subTitle:
     "DevOps Engineer, Open Source Enthusiast 🔥 Always learning.",
   resumeLink:
-    "https://docs.google.com/document/d/1A_jWRG74Rst427tg1izLa6vRXclS9_9F856jWJPJlDY/edit?usp=sharing",
+    "https://drive.google.com/file/d/10Uxv0Fzecvkivl-GP3ypVv1AvSeZUsXd/view?usp=sharing",
   mail: "mailto:gonzosoftware0@gmail.com",
 };
 
 const socialMediaLinks = {
-  /* Your Social Media Link */
+  /* Your Social Media Links */
   github: "https://github.com/GonzoTheDev",
   linkedin: "https://www.linkedin.com/in/shane-wilson-dublin/",
   gmail: "gonzosoftware0@gmail.com",
   gitlab: "https://gitlab.com/GonzoTheDev",
-  //facebook: "https://www.facebook.com/harikrishan.kanani/",
   twitter: "https://twitter.com/GonzoTheDev",
   instagram: "https://www.instagram.com/shaneb343/",
 };
@@ -311,8 +310,7 @@ const certifications = {
       logo_path: "edcl.png",
       certificate_link:
         "https://drive.google.com/drive/folders/1qlS7zen-TnixKnLpjWrF_fic1z7SKIE0?usp=sharing",
-      alt_name: "MongoDB University",
-      // color_code: "#2AAFED",
+      alt_name: "Finglas Training Centre CDETB",
       color_code: "#2AAFED",
     },
     {
@@ -324,62 +322,15 @@ const certifications = {
       alt_name: "dataflair",
       color_code: "#47A048",
     },
-    /*{
-      title: "A300: Atlas Security",
-      subtitle: "MongoDB University",
-      logo_path: "mongo.png",
-      certificate_link:
-        "https://drive.google.com/file/d/12u_tkvhgB-K2TIm-RDdJOwYbQ9ccqiqA/view?usp=sharing",
-      alt_name: "MongoDB University",
-      // color_code: "#F6B808",
-      color_code: "#fe0037",
-    },*/
     {
       title: "Data Structures & Algorithms",
       subtitle: "Data Flair",
       logo_path: "dataflair.png",
       certificate_link:
         "https://drive.google.com/file/d/1xnUwp8ZjAFPmCc3MIq_wAck9L7ckIS68/view?usp=sharing",
-      alt_name: "Workshop",
+      alt_name: "dataflair",
       color_code: "#fe0037",
     },
-    /*{
-      title: "MLH Local Hack Day: Build",
-      subtitle: "Major League Hacking",
-      logo_path: "mlh-logo.svg",
-      certificate_link:
-        "https://drive.google.com/file/d/1ws7g2Oepu76vDFir6SvR_emFAMSkB2ZQ/view?usp=sharing",
-      alt_name: "Google",
-      color_code: "#fe0037",
-    },
-    {
-      title: "Hack20",
-      subtitle: "Flutter International Hackathon",
-      logo_path: "flutter.png",
-      certificate_link:
-        "https://drive.google.com/file/d/1JTd8pVlHbP0RVQYtfa4OZgJYGfdiCwM6/view?usp=sharing",
-      alt_name: "Flutter International Hackathon",
-      color_code: "#2AAFED",
-    },
-    {
-      title: "Postman Student Expert",
-      subtitle: "Postman",
-      logo_path: "postman.png",
-      certificate_link:
-        "https://badgr.com/public/assertions/h2qevHs4SlyoHErJQ0mn2g",
-      alt_name: "Postman",
-      // color_code: "#f36c3d",
-      color_code: "#fffbf3",
-    },*/
-    // color_code: "#8C151599",
-    // color_code: "#7A7A7A",
-    // color_code: "#0C9D5899",
-    // color_code: "#C5E2EE",
-    // color_code: "#ffc475",
-    // color_code: "#g",
-    // color_code: "#ffbfae",
-    // color_code: "#fffbf3",
-    // color_code: "#b190b0",
   ],
 };
 
@@ -420,6 +371,12 @@ route without having to fill out any details. The app would log their name, time
 tag in the web server database and would then display in both the managers and clients dashboards in real time. I added many features to
 this project over the years and I would be glad to talk about them in more detail.
 
+One major project I was tasked with was digitising all of MCR security's employee documents, all of which were stored on paper in folders in a filing cabinet. 
+I spent months going through all of the documents and scanning them into a system I created to store all documents in a database, each employee had a 
+user profile and it kept track of proof of ID, proof of address, GNIB cards & their expiry dates, and security licenes & their expiry dates. 
+The system would display, in an easy to read manner, all employees with an expired document so that they could be quickly contacted for updated documents. 
+This system made a huge reduction in the hours and man power required to get all files in order when it came time for an audit.
+
 cleanroomequipment.ie - A catalogue and quote website built using Magento 2.0. I implemented several custom plugins for
 this site so that it would provide quotes to customers for cleanroom equipment. This site had over 1,000 products. This site
 was built for MCR Engineering, another company under the MCR Group umbrella.
@@ -430,16 +387,24 @@ as for job postings and news.`
             color: "#4c4d6c",
         },
         {
-          title: "Control & Monitoring Supervisor / System Administrator / Junior Web Developer",
+          title: "Control & Monitoring Supervisor / System Administrator / Web Developer",
           company: "MCR Security",
           company_url: "https://mcrgroup.ie",
           logo_path: "Security.png",
           duration: "Jun 2014 - May 2016",
           location: "Control Room",
           description:
-          `Responsibilities included:
-Ensuring staff were on time and on site for the start of their shifts, arranging cover when necessary.`,
-            // "Created Front end of Yearn Financial Mutual Funds website. also degined simple web application for better user experience, designed DB Schemas as well.",
+          `Control & Monitoring Supervisor responsibilities included:
+Ensuring staff were on time and on site for the start of their shifts, arranging cover when necessary.
+Calling every site once per hour throughout the night to check in on security officers.
+Take incident reports from officers and inform relevant stakeholders/management as necessary.
+
+System Administrator responsibilites included:
+Maintaining a webserver for clocking system web app (Ubuntu/Apache).
+
+Web Developer responsibilites included: 
+Continuously develop and improve a clocking system I created for security officers to record their patrols. 
+It was during this time and with this project that I honed my skills as a web developer.`,
           color: "#d14e52",
         }
       ],
@@ -447,69 +412,38 @@ Ensuring staff were on time and on site for the start of their shifts, arranging
     {
       title: "Volunteerships",
       experiences: [
-        {
-          title: "Cross Winter of Code Mentor",
-          company: "CWOC",
-          company_url: "https://crosswoc.ieeedtu.in/",
-          logo_path: "cwoc.png",
-          duration: "Feb 2021 - Present",
-          location: "Work From Home",
-          description:
-            "Mentorship responsibilities were to help students plan the project, review issues and pull requests, ensure smooth progress and help them out when they are stuck.",
-          color: "#4285F4",
-        },
-        {
-          title: "Campus Hustler",
-          company: "Skillenza",
-          company_url: "https://skillenza.com/",
-          logo_path: "skillenza.png",
-          duration: "Feb 2021 - Present",
-          location: "Work from Home",
-          description: "Spread Awareness of new Technologies and new Opportunities to Students and Grow Skillenza Community.",
-          color: "#196acf",
-        },
+        
         {
           title: "GitHub Student Developer",
           company: "GitHub",
           company_url: "https://github.com/",
           logo_path: "github.png",
-          duration: "Nov 2019 - Present",
+          duration: "Sept 2020 - Present",
           location: "Work from Home",
           description:
-          "Contribute to Open Source Community and Open Source Project.",
+          "Contribute to Open Source Community and Open Source Projects.",
           color: "#040f26",
         },
         {
-          title: "Google Local Guide",
-          company: "Google Map",
-          company_url: "https://maps.google.com/localguides/",
-          logo_path: "localguide.png",
-          duration: "Sep 2018 - Present",
-          location: "Work From Home",
-          description:
-            "Day-to-day responsibilities of helping local businesses to spread their business to the world. Helping users by writing reviews about different locations and spaces such as shops, malls, etc.",
-          color: "#D83B01",
-        },
-        {
-          title: "GDG Student Volunteer",
-          company: "Google Developer Groups",
-          company_url: "https://gdg.community.dev/",
+          title: "GDSC Student Volunteer",
+          company: "Google Developer Student Clubs",
+          company_url: "https://gdsc.community.dev/technological-university-dublin/",
           logo_path: "gdg.png",
-          duration: "Feb 2021 - Present",
+          duration: "Aug 2022 - Present",
           location: "Work From Home",
           description:
-            "Google Developer Group Surat Student Volunteer and Member.",
+            "Google Developer Group TU Dublin Student Volunteer and Member.",
           color: "#D83B01",
         },
         {
-          title: "E. F. I. Student Volunteer",
-          company: "ENVIRONMENTALIST FOUNDATION OF INDIA",
-          company_url: "https://indiaenvironment.org/",
-          logo_path: "efi.png",
-          duration: "Apr 2017 - Present",
-          location: "Work From Home",
+          title: "Swords Tidy Towns Volunteer",
+          company: "Swords Tidy Towns",
+          company_url: "https://swordstidytowns.com/",
+          logo_path: "stt.jpg",
+          duration: "Jan 2020 - May 2020",
+          location: "Swords",
           description:
-            "Take time out over weekends to join a gang of nation builders, nature enthusiasts to conserve what is left.",
+            "Volunteered every Saturday from January to May 2020 to pick litter around Swords.",
           color: "#5a900f",
         },
       ],
@@ -521,7 +455,7 @@ Ensuring staff were on time and on site for the start of their shifts, arranging
 const projectsHeader = {
   title: "Projects",
   description:
-    "My projects make use of a vast variety of latest technology tools. My best experience is to create NodeJS Backend Projects, Python Scripts, and React Project. Below are some of my projects. Note that not all of the mentioned projects are on GitHub yet.",
+    "My projects make use of a variety of the latest technology tools. My strongest skills are in web development and cloud technologies. Below are some of my projects. Note that some projects are set to private on github for security purposes.",
   avatar_image_path: "projects_image.svg",
 };
 
@@ -546,22 +480,34 @@ const projects = {
   data: [
     {
       id: "0",
-      name: "AutomateInstaPyBot",
-      url: "https://github.com/harikanani/AutomateInstaPyBot",
-      description: "This is Instagram Bot. This will login to your Instagram account. Follow Users, Unfollow Users, Remove Profile Photo",
+      name: "Gonzo Fishing",
+      url: "https://github.com/GonzoTheDev/gonzofishing.ie",
+      description: "This is my personal fishing blog website. I use this site to log all of my fishing trips/catches and post videos, photos and information. ",
       languages: [
         {
-          name: "Python",
-          iconifyClass: "logos-python",
+          name: "HTML5",
+          iconifyClass: "vscode-icons:file-type-html",
+        },
+        {
+          name: "CSS3",
+          iconifyClass: "vscode-icons:file-type-css",
+        },
+        {
+          name: "JavasScript",
+          iconifyClass: "logos-javascript",
+        },
+        {
+          name: "Bootstrap",
+          iconifyClass: "logos-bootstrap",
         },
       ],
     },
     {
       id: "1",
-      name: "react-twitter-clone",
-      url: "https://github.com/harikanani/react-twitter-clone",
+      name: "Gigachat-React",
+      url: "https://github.com/GonzoTheDev/GigaChat-React",
       description:
-        "A React Twitter Clone UI with basic functionality such as make a Tweet.Embedded Profile Tweets and Share on Twitter.",
+        "A cross-platform cloud native messaging app with built-in wallet for sending payments to contacts and making purchases with virtual card.",
       languages: [
         {
           name: "HTML5",
@@ -583,175 +529,67 @@ const projects = {
     },
     {
       id: "2",
-      name: "node-blockchain",
-      url: "https://github.com/harikanani/node-blockchain",
+      name: "Gigachat-Flutter",
+      url: "https://github.com/GonzoTheDev/GigaChat-Flutter",
       description:
-        "A simple blockchain and cryptocurrency wallet implemented in Node.js and TypeScript (for learning purposes).",
+        "A cross-platform cloud native messaging app with built-in wallet for sending payments to contacts and making purchases with virtual card.",
       languages: [
         {
-          name: "NodeJS",
-          iconifyClass: "logos-nodejs",
+          name: "Flutter",
+          iconifyClass: "logos-flutter",
         },
         {
-          name: "TypeScript",
-          iconifyClass: "logos-typescript",
+          name: "Python",
+          iconifyClass: "logos-python",
         },
       ],
     },
     {
       id: "3",
-      name: "top-crypto-gainers",
-      url: "https://github.com/harikanani/top-crypto-gainers",
+      name: "MusicVisuals",
+      url: "https://github.com/GonzoTheDev/MusicVisuals",
       description:
-        "A top high price changed crypto coins wring 24 hoursA sound-classifier webapp made with ReactJS + TensorflowJS.",
+        "A collaboration project for a major year 2 OOP assignment, generating visualizations that react to music.",
       languages: [
         {
-          name: "HTML5",
-          iconifyClass: "vscode-icons:file-type-html",
-        },
-        {
-          name: "CSS3",
-          iconifyClass: "vscode-icons:file-type-css",
-        },
-        {
-          name: "JavaScript",
-          iconifyClass: "logos-javascript",
-        },
-        {
-          name: "ReactJS",
-          iconifyClass: "logos-react",
+          name: "Java",
+          iconifyClass: "logos-java",
         },
       ],
     },
     {
       id: "4",
-      name: "personal-portfolio",
-      url: "https://github.com/harikanani/personal-portfolio",
+      name: "AI-NFT-ART",
+      url: "https://github.com/GonzoTheDev/AI-NFT-Art",
       description:
-        "A simple command line interface based quiz app to know more about me :).",
+        "A java program to generate psychedelic NFT Art.",
       languages: [
         {
-          name: "JavaScript",
-          iconifyClass: "logos-javascript",
-        },
-        {
-          name: "NodeJS",
-          iconifyClass: "logos-nodejs",
-        },
-      ],
-    },
-    {
-      id: "3",
-      name: "node_express_crud_api_starter",
-      url: "https://github.com/harikanani/node_express_crud_api_starter",
-      description:
-        "Simple NodeJS Express CRUD Operations API starter.",
-      languages: [
-        {
-          name: "NodeJS",
-          iconifyClass: "logos-nodejs",
-        },
-      ],
-    },
-    {
-      id: "4",
-      name: "node-web-scrapper",
-      url: "https://github.com/harikanani/node-web-scrapper",
-      description:
-        "A Simple web scrapper that scrap the information of amazon products such as price.It also scrap Wikipedia Data such as birthdate.",
-      languages: [
-        {
-          name: "HTML5",
-          iconifyClass: "vscode-icons:file-type-html",
-        },
-        {
-          name: "CSS3",
-          iconifyClass: "vscode-icons:file-type-css",
-        },
-        {
-          name: "NodeJs",
-          iconifyClass: "logos-nodejs",
+          name: "Java",
+          iconifyClass: "logos-java",
         },
       ],
     },
     {
       id: "5",
-      name: "shanewilson.ie",
-      url: "https://github.com/GonzoTheDev/Portfolio",
+      name: "BitcoinPublicKeyGrabber",
+      url: "https://github.com/GonzoTheDev/BitcoinPublicKeyGrabber",
       description:
-        "A Personal Portfolio Website that showcases my work and experience. which is hosted on Github Pages.",
+        "A python program that finds the public keys to a list of bitcoin addresses if they are known.",
       languages: [
         {
-          name: "HTML5",
-          iconifyClass: "vscode-icons:file-type-html",
-        },
-        {
-          name: "CSS3",
-          iconifyClass: "vscode-icons:file-type-css",
-        },
-        {
-          name: "JavaScript",
-          iconifyClass: "logos-javascript",
-        },
-        {
-          name: "SCSS",
-          iconifyClass: "vscode-icons:file-type-scss2",
+          name: "Python",
+          iconifyClass: "logos-python",
         },
       ],
     },
     {
       id: "6",
-      name: "Automate Attendace",
-      url: "https://github.com/harikanani/Node_Python",
+      name: "OpenDax",
+      url: "https://github.com/GonzoTheDev/opendax",
       description:
-        "Automation of Online Attendance using node js and python",
+        "OpenDAX is an open-source cloud-native multi-service platform for building a Blockchain/FinTech exchange of digital assets, cryptocurrency and security tokens.",
       languages: [
-        {
-          name: "JavaScript",
-          iconifyClass: "logos-javascript",
-        },
-        {
-          name: "Python",
-          iconifyClass: "logos-python",
-        },
-      ],
-    },
-    {
-      id: "7",
-      name: "Automate Discord Bot",
-      url: "https://github.com/harikanani/AutomateDiscordBot",
-      description:
-        "A Discord Bot to send Automatic messages to serer channel in regular time difference.",
-      languages: [
-        {
-          name: "Python",
-          iconifyClass: "logos-python",
-        },
-        {
-          name: "Python Selenium",
-          iconifyClass: "logos-selenium",
-        },
-        {
-          name: "Chromium Browser",
-          iconifyClass: "openmoji-chromium",
-        },
-      ],
-    },
-    {
-      id: "8",
-      name: "Flask Blog",
-      url: "https://github.com/harikanani/flask_blog",
-      description:
-        "A Simple Blog Web Application made using Flask Framework",
-      languages: [
-        {
-          name: "Python",
-          iconifyClass: "logos-python",
-        },
-        {
-          name: "Flask",
-          iconifyClass: "cib-flask",
-        },
         {
           name: "HTML5",
           iconifyClass: "vscode-icons:file-type-html",
@@ -760,102 +598,101 @@ const projects = {
           name: "CSS3",
           iconifyClass: "vscode-icons:file-type-css",
         },
+        {
+          name: "Javscript",
+          iconifyClass: "logos-javascript",
+        },
+        {
+          name: "Ruby",
+          iconifyClass: "logos-ruby",
+        },
+        {
+          name: "Docker",
+          iconifyClass: "logos-docker",
+        },
       ],
     },
     {
-      id: "9",
-      name: "Netflix top series",
-      url: "https://github.com/harikanani/netflix-top-series",
+      id: "7",
+      name: "My Portfolio",
+      url: "https://github.com/GonzoTheDev/Portfolio",
       description:
-        "List of Top Netflix Series which is deployed to vercel.",
+        "A Personal Portfolio Website that showcases my work and experience.",
       languages: [
+        {
+          name: "HTML5",
+          iconifyClass: "vscode-icons:file-type-html",
+        },
+        {
+          name: "CSS3",
+          iconifyClass: "vscode-icons:file-type-css",
+        },
         {
           name: "JavaScript",
           iconifyClass: "logos-javascript",
         },
         {
-          name: "ReactJS",
+          name: "React",
           iconifyClass: "logos-react",
         },
+      ],
+    },
+    {
+      id: "8",
+      name: "CryptoCoin",
+      url: "https://github.com/GonzoTheDev/crypto",
+      description:
+        "Cryptocoin is a proof-of-work cryptocurrency using the cryptonight superfast algorithm and based on monero.",
+      languages: [
         {
-          name: "HTML5",
-          iconifyClass: "logos-html-5",
+          name: "C++",
+          iconifyClass: "logos-c-plusplus",
         },
         {
-          name: "CSS3",
-          iconifyClass: "logos-css-3",
+          name: "C",
+          iconifyClass: "logos-c",
+        },
+        {
+          name: "Python",
+          iconifyClass: "logos-python",
+        },
+      ],
+    },
+    {
+      id: "9",
+      name: "XMR-Stak",
+      url: "https://github.com/GonzoTheDev/xmr-stak",
+      description:
+        "A unified All-in-one Monero based coin miner.",
+      languages: [
+        {
+          name: "C++",
+          iconifyClass: "logos-c-plusplus",
+        },
+        {
+          name: "C",
+          iconifyClass: "logos-c",
+        },
+        {
+          name: "Cuda",
+          iconifyClass: "logos-cuda",
         },
       ],
     },
     {
       id: "10",
-      name: "COVID-19 Tracker",
-      url: "https://github.com/harikanani/Covid19TrackerReact",
-      description: "Simple Covid-19 Tracker made using React and deployed to Vercel.",
+      name: "Cryptocoin-android-wallet",
+      url: "https://github.com/GonzoTheDev/cryptocoin-android-wallet",
+      description:
+        "A android wallet app for cryptocoin.",
       languages: [
         {
-          name: "JavaScript",
-          iconifyClass: "logos-javascript",
+          name: "Java",
+          iconifyClass: "logos-java",
         },
         {
-          name: "ReactJS",
-          iconifyClass: "logos-react",
-        },
-        {
-          name: "HTML5",
-          iconifyClass: "logos-html-5",
-        },
-        {
-          name: "CSS3",
-          iconifyClass: "logos-css-3",
-        },
-      ],
-    },
-    {
-      id: "11",
-      name: "Food Order Static Website",
-      url: "https://github.com/harikanani/food-order-website",
-      description: "A simple static website related to food restaurants service. this is reasponsive as well.",
-      languages: [
-        {
-          name: "HTML5",
-          iconifyClass: "logos-html-5",
-        },
-        {
-          name: "CSS3",
-          iconifyClass: "logos-css-3",
-        },
-        {
-          name: "JavaScript",
-          iconifyClass: "logos-javascript",
-        },
-        {
-          name: "PHP",
-          iconifyClass: "logos-php",
-        },
-      ],
-    },
-    {
-      id: "12",
-      name: "NFT Launchpad",
-      url: "https://deliquescent-cents.000webhostapp.com/",
-      description: "NFT Launchpad crypto site portfolio",
-      languages: [
-        {
-          name: "HTML5",
-          iconifyClass: "logos-html-5",
-        },
-        {
-          name: "CSS3",
-          iconifyClass: "logos-css-3",
-        },
-        {
-          name: "JavaScript",
-          iconifyClass: "logos-javascript",
-        },
-        {
-          name: "ReactJS",
-          iconifyClass: "logos-react",
+          name: "C++",
+          iconifyClass: "logos-c-plusplus",
         },
       ],
     },
