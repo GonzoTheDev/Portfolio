@@ -346,12 +346,37 @@ const experience = {
       title: "Work Experience",
       experiences: [
         {
+          title: "DevOps Intern",
+          company: "Bearing Point",
+          company_url: "https://bearingpoint.com",
+          logo_path: "bearingpoint.png",
+          duration: "Jan 2023 - July 2023 ",
+          location: "Dublin, Ireland",
+          description:
+          [
+          ` 
+Work Placement/Internship
+
+I was hired by Bearing Point for a 6 months internship as work placement for my course. I was placed on the CI team and some of the tasks I had been assigned include:
+
+ - Converting legacy C# projects to SDK Style
+ - Implement UnitTest projects as neccessary
+ - Run pipelines in Azure DevOps
+ - Test building projects using local envirnoment
+ - Implement powershell scripts & commands
+ - Using GIT for branching & merging
+
+            `
+          ],
+            color: "#4c4d6c",
+        },
+        {
           title: "Full Stack Web & Andoird Developer/System Administrator",
           company: "MCR Group",
           company_url: "https://mcrgroup.ie",
           logo_path: "group.png",
           duration: "May 2016 - May 2018",
-          location: "Head Office",
+          location: "Dublin, Ireland",
           description:
           [
           `
@@ -392,7 +417,7 @@ as for job postings and news.`
           company_url: "https://mcrgroup.ie",
           logo_path: "Security.png",
           duration: "Jun 2014 - May 2016",
-          location: "Control Room",
+          location: "Dublin, Ireland",
           description:
           `Control & Monitoring Supervisor responsibilities included:
 Ensuring staff were on time and on site for the start of their shifts, arranging cover when necessary.
