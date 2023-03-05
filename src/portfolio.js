@@ -368,7 +368,7 @@ I was hired by Bearing Point for a 6 months internship as work placement for my 
 
             `
           ],
-            color: "#4c4d6c",
+            color: "#29D5FF",
         },
         {
           title: "Full Stack Web & Andoird Developer/System Administrator",
