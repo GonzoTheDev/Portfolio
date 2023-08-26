@@ -14,10 +14,9 @@ const greeting = {
   logo_name: "shane.w()",
   nickname: "shane / gonzo",
   full_name: "Shane Wilson",
-  subTitle:
-    "DevOps Engineer, Open Source Enthusiast 🔥 Always learning.",
+  subTitle: "DevOps Engineer, Open Source Enthusiast 🔥 Always learning.",
   resumeLink:
-    "https://drive.google.com/file/d/10Uxv0Fzecvkivl-GP3ypVv1AvSeZUsXd/view?usp=sharing",
+    "https://drive.google.com/file/d/1Bx3xXmngfOgRHXDzTWm_3wsZBnDFrtc5/view?usp=drive_link",
   mail: "mailto:gonzosoftware0@gmail.com",
 };
 
@@ -43,7 +42,7 @@ const skills = {
         "⚡ Build software applications and packaging them using tools like npm & pip.",
         "⚡ CI/CD with tools such as Jenkins, GitLab, AWS CodePipeline.",
         "⚡ Experienced in containerization tools such as Docker and Kubernetes.",
-        "⚡ System and platform monitoring with Prometheus, ELK stack, Grafana."
+        "⚡ System and platform monitoring with Prometheus, ELK stack, Grafana.",
       ],
       softwareSkills: [
         {
@@ -294,9 +293,7 @@ const degrees = {
       logo_path: "plunket.png",
       alt_name: "PLUNKET",
       duration: "2010 - 2012",
-      descriptions: [
-        "⚡ I received 410 points in my leaving certificate.",
-      ],
+      descriptions: ["⚡ I received 410 points in my leaving certificate."],
       website_link: "https://www.plunketcollege.ie/",
     },
   ],
@@ -352,9 +349,8 @@ const experience = {
           logo_path: "bearingpoint.png",
           duration: "Jan 2023 - July 2023 ",
           location: "Dublin, Ireland",
-          description:
-          [
-          ` 
+          description: [
+            ` 
 Work Placement/Internship
 
 I was hired by Bearing Point for a 6 months internship as work placement for my course. I was placed on the CI team and some of the tasks I had been assigned include:
@@ -366,9 +362,9 @@ I was hired by Bearing Point for a 6 months internship as work placement for my 
  - Implement powershell scripts & commands
  - Using GIT for branching & merging
 
-            `
+            `,
           ],
-            color: "#29D5FF",
+          color: "#29D5FF",
         },
         {
           title: "Full Stack Web & Andoird Developer/System Administrator",
@@ -377,9 +373,8 @@ I was hired by Bearing Point for a 6 months internship as work placement for my 
           logo_path: "group.png",
           duration: "May 2016 - May 2018",
           location: "Dublin, Ireland",
-          description:
-          [
-          `
+          description: [
+            `
 Notable Projects
 
 mcrlogs.com - This was the very first project I created while working for MCR, originally it was a very basic website, the
@@ -407,19 +402,19 @@ this site so that it would provide quotes to customers for cleanroom equipment. 
 was built for MCR Engineering, another company under the MCR Group umbrella.
 
 mcrgroup.ie - The main business website for MCR Group. Built using Joomla and included creating some custom plugins such
-as for job postings and news.`
+as for job postings and news.`,
           ],
-            color: "#4c4d6c",
+          color: "#4c4d6c",
         },
         {
-          title: "Control & Monitoring Supervisor / System Administrator / Web Developer",
+          title:
+            "Control & Monitoring Supervisor / System Administrator / Web Developer",
           company: "MCR Security",
           company_url: "https://mcrgroup.ie",
           logo_path: "Security.png",
           duration: "Jun 2014 - May 2016",
           location: "Dublin, Ireland",
-          description:
-          `Control & Monitoring Supervisor responsibilities included:
+          description: `Control & Monitoring Supervisor responsibilities included:
 Ensuring staff were on time and on site for the start of their shifts, arranging cover when necessary.
 Calling every site once per hour throughout the night to check in on security officers.
 Take incident reports from officers and inform relevant stakeholders/management as necessary.
@@ -431,13 +426,12 @@ Web Developer responsibilites included:
 Continuously develop and improve a clocking system I created for security officers to record their patrols. 
 It was during this time and with this project that I honed my skills as a web developer.`,
           color: "#d14e52",
-        }
+        },
       ],
     },
     {
       title: "Volunteerships",
       experiences: [
-        
         {
           title: "GitHub Student Developer",
           company: "GitHub",
@@ -446,13 +440,14 @@ It was during this time and with this project that I honed my skills as a web de
           duration: "Sept 2020 - Present",
           location: "Work from Home",
           description:
-          "Contribute to Open Source Community and Open Source Projects.",
+            "Contribute to Open Source Community and Open Source Projects.",
           color: "#040f26",
         },
         {
           title: "GDSC Student Volunteer",
           company: "Google Developer Student Clubs",
-          company_url: "https://gdsc.community.dev/technological-university-dublin/",
+          company_url:
+            "https://gdsc.community.dev/technological-university-dublin/",
           logo_path: "gdg.png",
           duration: "Aug 2022 - Present",
           location: "Work From Home",
@@ -507,7 +502,8 @@ const projects = {
       id: "0",
       name: "Gonzo Fishing",
       url: "https://github.com/GonzoTheDev/gonzofishing.ie",
-      description: "This is my personal fishing blog website. I use this site to log all of my fishing trips/catches and post videos, photos and information. ",
+      description:
+        "This is my personal fishing blog website. I use this site to log all of my fishing trips/catches and post videos, photos and information. ",
       languages: [
         {
           name: "HTML5",
@@ -586,8 +582,7 @@ const projects = {
       id: "4",
       name: "AI-NFT-ART",
       url: "https://github.com/GonzoTheDev/AI-NFT-Art",
-      description:
-        "A java program to generate psychedelic NFT Art.",
+      description: "A java program to generate psychedelic NFT Art.",
       languages: [
         {
           name: "Java",
@@ -687,8 +682,7 @@ const projects = {
       id: "9",
       name: "XMR-Stak",
       url: "https://github.com/GonzoTheDev/xmr-stak",
-      description:
-        "A unified All-in-one Monero based coin miner.",
+      description: "A unified All-in-one Monero based coin miner.",
       languages: [
         {
           name: "C++",
@@ -708,8 +702,7 @@ const projects = {
       id: "10",
       name: "Cryptocoin-android-wallet",
       url: "https://github.com/GonzoTheDev/cryptocoin-android-wallet",
-      description:
-        "A android wallet app for cryptocoin.",
+      description: "A android wallet app for cryptocoin.",
       languages: [
         {
           name: "Java",
