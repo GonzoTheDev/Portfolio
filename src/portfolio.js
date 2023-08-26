@@ -16,7 +16,7 @@ const greeting = {
   full_name: "Shane Wilson",
   subTitle: "DevOps Engineer, Open Source Enthusiast 🔥 Always learning.",
   resumeLink:
-    "https://drive.google.com/file/d/1Bx3xXmngfOgRHXDzTWm_3wsZBnDFrtc5/view?usp=drive_link",
+    "https://drive.google.com/file/d/162W-A3Hp9ctDP2nTRPR808ArJCklrWLX/view?usp=sharing",
   mail: "mailto:gonzosoftware0@gmail.com",
 };
 
