@@ -301,7 +301,7 @@ const degrees = {
 
 const certifications = {
   certifications: [
-    {
+    /*{
       title: "ECDL",
       subtitle: "Finglas Training Centre CDETB",
       logo_path: "edcl.png",
@@ -328,6 +328,7 @@ const certifications = {
       alt_name: "dataflair",
       color_code: "#fe0037",
     },
+    */
   ],
 };
 
@@ -500,6 +501,31 @@ const projects = {
   data: [
     {
       id: "0",
+      name: "MyTherapyPal",
+      url: "https://github.com/GonzoTheDev/MyTherapyPal",
+      description:
+        "A a comprehensive cross-platform mobile and rich web application aimed at providing psychotherapists, counsellors and their clients with a platform and tools to facilitate tracking therapy progress. Features include secure messaging, an AI mental health assistant chatbot, mood tracking, therapist listings & map, and a journal for clients to track their progress.",
+      languages: [
+        {
+          name: "JavaScript",
+          iconifyClass: "logos-javascript",
+        },
+        {
+          name: "Python",
+          iconifyClass: "logos-python",
+        },
+        {
+          name: "Flutter",
+          iconifyClass: "logos-flutter",
+        },
+        {
+          name: "Firebase",
+          iconifyClass: "logos-firebase",
+        },
+      ],
+    },
+    {
+      id: "1",
       name: "Gonzo Fishing",
       url: "https://github.com/GonzoTheDev/gonzofishing.ie",
       description:
@@ -524,49 +550,7 @@ const projects = {
       ],
     },
     {
-      id: "1",
-      name: "Gigachat-React",
-      url: "https://github.com/GonzoTheDev/GigaChat-React",
-      description:
-        "A cross-platform cloud native messaging app with built-in wallet for sending payments to contacts and making purchases with virtual card.",
-      languages: [
-        {
-          name: "HTML5",
-          iconifyClass: "vscode-icons:file-type-html",
-        },
-        {
-          name: "CSS3",
-          iconifyClass: "vscode-icons:file-type-css",
-        },
-        {
-          name: "React",
-          iconifyClass: "logos-react",
-        },
-        {
-          name: "Firebase",
-          iconifyClass: "logos-firebase",
-        },
-      ],
-    },
-    {
       id: "2",
-      name: "Gigachat-Flutter",
-      url: "https://github.com/GonzoTheDev/GigaChat-Flutter",
-      description:
-        "A cross-platform cloud native messaging app with built-in wallet for sending payments to contacts and making purchases with virtual card.",
-      languages: [
-        {
-          name: "Flutter",
-          iconifyClass: "logos-flutter",
-        },
-        {
-          name: "Python",
-          iconifyClass: "logos-python",
-        },
-      ],
-    },
-    {
-      id: "3",
       name: "MusicVisuals",
       url: "https://github.com/GonzoTheDev/MusicVisuals",
       description:
@@ -579,61 +563,7 @@ const projects = {
       ],
     },
     {
-      id: "4",
-      name: "AI-NFT-ART",
-      url: "https://github.com/GonzoTheDev/AI-NFT-Art",
-      description: "A java program to generate psychedelic NFT Art.",
-      languages: [
-        {
-          name: "Java",
-          iconifyClass: "logos-java",
-        },
-      ],
-    },
-    {
-      id: "5",
-      name: "BitcoinPublicKeyGrabber",
-      url: "https://github.com/GonzoTheDev/BitcoinPublicKeyGrabber",
-      description:
-        "A python program that finds the public keys to a list of bitcoin addresses if they are known.",
-      languages: [
-        {
-          name: "Python",
-          iconifyClass: "logos-python",
-        },
-      ],
-    },
-    {
-      id: "6",
-      name: "OpenDax",
-      url: "https://github.com/GonzoTheDev/opendax",
-      description:
-        "OpenDAX is an open-source cloud-native multi-service platform for building a Blockchain/FinTech exchange of digital assets, cryptocurrency and security tokens.",
-      languages: [
-        {
-          name: "HTML5",
-          iconifyClass: "vscode-icons:file-type-html",
-        },
-        {
-          name: "CSS3",
-          iconifyClass: "vscode-icons:file-type-css",
-        },
-        {
-          name: "Javscript",
-          iconifyClass: "logos-javascript",
-        },
-        {
-          name: "Ruby",
-          iconifyClass: "logos-ruby",
-        },
-        {
-          name: "Docker",
-          iconifyClass: "logos-docker",
-        },
-      ],
-    },
-    {
-      id: "7",
+      id: "3",
       name: "My Portfolio",
       url: "https://github.com/GonzoTheDev/Portfolio",
       description:
@@ -658,7 +588,27 @@ const projects = {
       ],
     },
     {
-      id: "8",
+      id: "4",
+      name: "Advanced Web Mapping Assingment - Geodjango Fishing App",
+      url: "https://github.com/GonzoTheDev/AWM_CA2",
+      description: "A web application for finding fishing locations around Ireland using Django Python Web Framework and GPT-4 API for an AI fishing assistant chatbot.",
+      languages: [
+        {
+          name: "Django",
+          iconifyClass: "logos-django",
+        },
+        {
+          name: "Python",
+          iconifyClass: "logos-python",
+        },
+        {
+          name: "GPT-4",
+          iconifyClass: "logos-openai",
+        },
+      ],
+    },
+    {
+      id: "5",
       name: "CryptoCoin",
       url: "https://github.com/GonzoTheDev/crypto",
       description:
@@ -679,27 +629,7 @@ const projects = {
       ],
     },
     {
-      id: "9",
-      name: "XMR-Stak",
-      url: "https://github.com/GonzoTheDev/xmr-stak",
-      description: "A unified All-in-one Monero based coin miner.",
-      languages: [
-        {
-          name: "C++",
-          iconifyClass: "logos-c-plusplus",
-        },
-        {
-          name: "C",
-          iconifyClass: "logos-c",
-        },
-        {
-          name: "Cuda",
-          iconifyClass: "logos-cuda",
-        },
-      ],
-    },
-    {
-      id: "10",
+      id: "6",
       name: "Cryptocoin-android-wallet",
       url: "https://github.com/GonzoTheDev/cryptocoin-android-wallet",
       description: "A android wallet app for cryptocoin.",
