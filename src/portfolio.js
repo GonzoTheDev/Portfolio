@@ -504,7 +504,7 @@ const projects = {
       name: "MyTherapyPal",
       url: "https://github.com/GonzoTheDev/MyTherapyPal",
       description:
-        "A a comprehensive cross-platform mobile and rich web application aimed at providing psychotherapists, counsellors and their clients with a platform and tools to facilitate tracking therapy progress. Features include secure messaging, an AI mental health assistant chatbot, mood tracking, therapist listings & map, and a journal for clients to track their progress.",
+        "A cross-platform mobile and rich web application aimed at providing psychotherapists and their clients with a platform & tools to facilitate tracking therapy progress.",
       languages: [
         {
           name: "JavaScript",
@@ -641,6 +641,26 @@ const projects = {
         {
           name: "C++",
           iconifyClass: "logos-c-plusplus",
+        },
+      ],
+    },
+    {
+      id: "7",
+      name: "gonzothedev.github.io",
+      url: "https://github.com/GonzoTheDev/gonzothedev.github.io",
+      description: "Rich Web Application Technologies Module (2024) - Lab Solutions & Website.",
+      languages: [
+        {
+          name: "JavaScript",
+          iconifyClass: "logos-javascript",
+        },
+        {
+          name: "HTML5",
+          iconifyClass: "vscode-icons:file-type-html",
+        },
+        {
+          name: "CSS3",
+          iconifyClass: "vscode-icons:file-type-css",
         },
       ],
     },
