@@ -315,7 +315,7 @@ const degrees = {
 const certifications = {
   certifications: [
     
-    {
+    /*{
       title: "Working towards Microsoft Certified: Azure DevOps Engineer Expert.",
       subtitle: "Microsoft Certifications",
       logo_path: "",
@@ -323,7 +323,7 @@ const certifications = {
         "",
       alt_name: "Microsoft Certifications",
       color_code: "#2AAFED",
-    }
+    }*/
     /*{
       title: "ECDL",
       subtitle: "Finglas Training Centre CDETB",
