@@ -31,6 +31,8 @@ body {
 
 .subTitle {
   color: #868e96;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Animations */
