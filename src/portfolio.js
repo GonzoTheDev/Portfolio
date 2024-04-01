@@ -36,13 +36,17 @@ const skills = {
       title: "DevOps Engineer",
       fileName: "FullStackImg",
       skills: [
-        "⚡ Design DevOps pipelines and workflow architectures with diagrams.",
-        "⚡ Plan and manage projects with tools such as Jira & Confluence.",
-        "⚡ Knowledgable in version control systems such as Git and GitHub.",
-        "⚡ Build software applications and packaging them using tools like npm & pip.",
-        "⚡ CI/CD with tools such as Jenkins, GitLab, AWS CodePipeline.",
-        "⚡ Experienced in containerization tools such as Docker and Kubernetes.",
-        "⚡ System and platform monitoring with Prometheus, ELK stack, Grafana.",
+        "⚡ Design & build DevOps pipelines and workflow architectures with diagrams.",
+        "⚡ Strong knowledge in version control systems such as Git.",
+        "⚡ Design & build cross-platform software applications.",
+        "⚡ CI/CD with tools such as Jenkins, Github Actions & Azure DevOps.",
+        "⚡ Experience with cloud platforms such as Azure DevOps, AWS, Google Cloud & Firebase.",
+        "⚡ Experienced in containerization tools such as Docker.",
+        "⚡ Knowledge of system and platform monitoring platforms Prometheus, Grafana & Backstage.",
+        "⚡ Proficient in the following languages: Python, Java, PHP, C, C#, Javascript, HTML/CSS & Dart.",
+        "⚡ Experience with databases such as MySQL, PostgreSQL, MongoDB & Firebase Cloudstore.",
+        "⚡ Experience with frameworks such as ReactJS, Node.js, Express, Django, Flutter, .NET & more.",
+
       ],
       softwareSkills: [
         {
@@ -200,15 +204,25 @@ const skills = {
             color: "#3776AB",
           },
         },
+        
+        {
+          skillName: "C#",
+          fontAwesomeClassname: "simple-icons:csharp",
+          style: {
+            color: "#439743",
+          },
+        },
       ],
     },
     {
       title: "Cloud Infra-Architecture",
       fileName: "CloudInfraImg",
       skills: [
-        "⚡ Experience working on multiple cloud platforms",
-        "⚡ Experience hosting and managing websites",
-        "⚡ Experience with Continuous Integration/Continuous Deployment",
+        "⚡ Experience working on multiple cloud platforms.",
+        "⚡ Experience of system administration & networking concepts.",
+        "⚡ Experience with Continuous Integration/Continuous Deployment (CI/CD).",
+        "⚡ Strong understanding of operating systems & Architecture.",
+        "⚡ Strong knowledge of data structures, algorithms and object-oriented programming.",
       ],
       softwareSkills: [
         {
@@ -219,17 +233,17 @@ const skills = {
           },
         },
         {
-          skillName: "Netlify",
-          fontAwesomeClassname: "simple-icons:netlify",
+          skillName: "Azure DevOps",
+          fontAwesomeClassname: "simple-icons:azuredevops",
           style: {
             color: "#38AFBB",
           },
         },
         {
-          skillName: "Heroku",
-          fontAwesomeClassname: "simple-icons:heroku",
+          skillName: "Google Cloud Platform",
+          fontAwesomeClassname: "simple-icons:googlecloud",
           style: {
-            color: "#6863A6",
+            color: "#38AFBB",
           },
         },
         {
@@ -278,7 +292,7 @@ const degrees = {
       title: "Technological University Dublin - Grangegorman",
       subtitle: "Bachelor of Science (Hons) in Computer Science - TU856",
       logo_path: "tud.png",
-      alt_name: "TUD",
+      alt_name: "TU Dublin",
       duration: "2020 - Present",
       descriptions: [
         "⚡ I'm currently pursuing my bachelors degree in Computer Science.",
@@ -293,7 +307,7 @@ const degrees = {
       logo_path: "plunket.png",
       alt_name: "PLUNKET",
       duration: "2010 - 2012",
-      descriptions: ["⚡ I received 410 points in my leaving certificate."],
+      descriptions: ["⚡ I completed my leaving certificate in 2012."],
       website_link: "https://www.plunketcollege.ie/",
     },
   ],
@@ -301,6 +315,10 @@ const degrees = {
 
 const certifications = {
   certifications: [
+    
+    {
+      title: "Working towards Microsoft Certified: Azure DevOps Engineer Expert.",
+    }
     /*{
       title: "ECDL",
       subtitle: "Finglas Training Centre CDETB",
@@ -491,7 +509,7 @@ const contactPageData = {
   blogSection: {
     title: "Blogs",
     subtitle:
-      "I don't blog frequently but when I do something awesome, I do try to document it so it can be helpful to others. I write on Twitter.",
+      "I don't blog frequently but when I do something noteworthy, I do try to document it so it can be helpful to others. I write on Twitter.",
     link: "https://twitter.com/GonzoTheDev",
     avatar_image_path: "blogs_image.svg",
   },
