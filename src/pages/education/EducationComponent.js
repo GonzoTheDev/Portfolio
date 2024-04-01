@@ -29,8 +29,7 @@ function Education(props) {
                 className="experience-header-detail-text subTitle"
                 style={{ color: theme.secondaryText }}
               >
-                I actively participate in hackathons and other tech-related
-                activities. Below are some of my major certifications.
+                Below are the details of my education and certifications. I am planning to start my Master's in Software Design & Cloud Computing in September 2025.
               </p>
             </div>
           </div>
