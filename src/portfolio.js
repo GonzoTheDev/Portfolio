@@ -11,12 +11,12 @@ const settings = {
 const greeting = {
   title: "Hello 👋.",
   title2: "Shane",
-  logo_name: "shane.w()",
+  logo_name: "Shane Buckley Wilson",
   nickname: "shane / gonzo",
   full_name: "Shane Wilson",
-  subTitle: "DevOps Engineer, Open Source Enthusiast 🔥 Always learning.",
+  subTitle: "DevOps/Cloud/Software Engineer and AI Enthusiast!",
   resumeLink:
-    "https://drive.google.com/file/d/162W-A3Hp9ctDP2nTRPR808ArJCklrWLX/view?usp=sharing",
+    "https://drive.google.com/file/d/1K1qbWKCt7x0IOcrIxmKzQIXuXyZIe6XN/view?usp=sharing",
   mail: "mailto:gonzosoftware0@gmail.com",
 };
 
@@ -25,7 +25,6 @@ const socialMediaLinks = {
   github: "https://github.com/GonzoTheDev",
   linkedin: "https://www.linkedin.com/in/shane-wilson-dublin/",
   gmail: "gonzosoftware0@gmail.com",
-  gitlab: "https://gitlab.com/GonzoTheDev",
   twitter: "https://twitter.com/GonzoTheDev",
   instagram: "https://www.instagram.com/shaneb343/",
 };
@@ -43,7 +42,7 @@ const skills = {
         "⚡ Experience with cloud platforms such as Azure DevOps, AWS, Google Cloud & Firebase.",
         "⚡ Experienced in containerization tools such as Docker.",
         "⚡ Knowledge of system and platform monitoring platforms Prometheus, Grafana & Backstage.",
-        "⚡ Proficient in the following languages: Python, Java, PHP, C, C#, Javascript, HTML/CSS & Dart.",
+        "⚡ Proficient in the following languages: Python, Java, PHP, C, C#, Javascript, & Dart.",
         "⚡ Experience with databases such as MySQL, PostgreSQL, MongoDB & Firebase Cloudstore.",
         "⚡ Experience with frameworks such as ReactJS, Node.js, Express, Django, Flutter, .NET & more.",
 
