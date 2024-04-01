@@ -317,6 +317,12 @@ const certifications = {
     
     {
       title: "Working towards Microsoft Certified: Azure DevOps Engineer Expert.",
+      subtitle: "Microsoft Certifications",
+      logo_path: "",
+      certificate_link:
+        "",
+      alt_name: "Microsoft Certifications",
+      color_code: "#2AAFED",
     }
     /*{
       title: "ECDL",
