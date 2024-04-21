@@ -11,9 +11,9 @@ const settings = {
 const greeting = {
   title: "Hello 👋.",
   title2: "Shane",
-  logo_name: "Shane Buckley Wilson",
+  logo_name: "Shane Buckley",
   nickname: "shane / gonzo",
-  full_name: "Shane Buckley Wilson",
+  full_name: "Shane Buckley",
   subTitle: "DevOps/Cloud/Software Engineer and AI Enthusiast!",
   resumeLink:
     "https://drive.google.com/file/d/1M0OmmFPnMYoeTYtSviaS672wmp9BXl7_/view?usp=sharing",
