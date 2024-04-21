@@ -511,13 +511,13 @@ const contactPageData = {
     description:
       "You can contact me at the places mentioned below. I will try to get back to you as fast as I can. ",
   },
-  /*blogSection: {
-    title: "Blogs",
+  blogSection: {
+    title: "",
     subtitle:
-      "I don't blog frequently but when I do something noteworthy, I do try to document it so it can be helpful to others. I write on Twitter.",
-    link: "https://twitter.com/GonzoTheDev",
-    avatar_image_path: "blogs_image.svg",
-  },*/
+      "",
+    link: "",
+    avatar_image_path: "",
+  },
 };
 
 const projects = {
