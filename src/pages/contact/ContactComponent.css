@@ -41,6 +41,7 @@
 .profile-pic {
   box-shadow: 0 5px 15px #353535;
   border-radius: 4px;
+  max-width: 500px !important;
 }
 
 .blog-heading-img-div {
