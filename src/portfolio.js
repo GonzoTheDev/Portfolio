@@ -460,7 +460,7 @@ const experience = {
 const projectsHeader = {
   title: "Projects",
   description:
-    "My projects make use of a variety of the latest technology tools. My strongest skills are in web development and cloud technologies. Below are some of my projects.",
+    "My projects make use of a variety of the latest technology tools. My strongest skills are in web development and cloud technologies. Below are some of my projects. ",
   avatar_image_path: "projects_image.svg",
 };
 
