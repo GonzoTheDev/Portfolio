@@ -214,11 +214,11 @@ const skills = {
       title: "Cloud Infra-Architecture",
       fileName: "CloudInfraImg",
       skills: [
-        "⚡ Experience working on multiple cloud platforms.",
-        "⚡ Experience of system administration & networking concepts.",
-        "⚡ Experience with Continuous Integration/Continuous Deployment (CI/CD).",
-        "⚡ Strong understanding of operating systems & Architecture.",
-        "⚡ Strong knowledge of data structures, algorithms and object-oriented programming.",
+        "⚡ Hands-on experience across multiple cloud platforms (Azure, AWS, GCP).",
+        "⚡ Proficient in system administration and core networking concepts.",
+        "⚡ Skilled in designing and managing CI/CD pipelines for reliable deployments.",
+        "⚡ Strong grasp of operating systems, virtualization, and system architecture.",
+        "⚡ Solid foundation in data structures, algorithms, and object-oriented programming.",
       ],
       softwareSkills: [
         {
