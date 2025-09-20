@@ -29,7 +29,7 @@ function Education(props) {
                 className="experience-header-detail-text subTitle"
                 style={{ color: theme.secondaryText }}
               >
-                Below are the details of my education and certifications. I am planning to start my Master's in Software Design & Cloud Computing in September 2025.
+                Below are the details of my education and certifications.
               </p>
             </div>
           </div>
