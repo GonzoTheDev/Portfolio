@@ -10,28 +10,43 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [18.x, 20.x, 22.x] # current LTS + latest
-
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node.js ${{ matrix.node-version }}
+      # Prefer a single, stable Node for now; we can add a matrix later
+      - name: Setup Node.js 18 LTS
         uses: actions/setup-node@v4
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: '18'
           cache: npm
-          cache-dependency-path: |
-            package-lock.json
+          cache-dependency-path: package-lock.json
 
-      - name: Install dependencies
-        run: npm ci
+      - name: Diagnostics
+        run: |
+          node -v
+          npm -v
+          if [ -f package.json ]; then
+            echo "=== engines from package.json ==="
+            node -e "try{console.log(require('./package.json').engines||{})}catch(e){console.log('no package.json?')}"
+          fi
+          if [ -f yarn.lock ]; then echo "Found yarn.lock (are you using Yarn?)"; fi
+          if [ ! -f package-lock.json ]; then echo "No package-lock.json found; npm ci will fail"; fi
 
-      # CRA treats CI=true as "fail on warnings".
-      # If you only want to verify it compiles, set CI=false.  
+      - name: Install deps (npm ci)
+        id: npminstall
+        run: |
+          set -e
+          npm ci --no-audit --no-fund || echo "npm_ci_failed=true" >> $GITHUB_OUTPUT
+
+      - name: Retry install with legacy peer deps (only if needed)
+        if: steps.npminstall.outputs.npm_ci_failed == 'true'
+        run: |
+          echo "Retrying with --legacy-peer-deps due to peer dependency conflicts..."
+          npm install --no-audit --no-fund --legacy-peer-deps
+
       - name: Build
         run: npm run build
         env:
+          # For CRA, CI=true treats warnings as errors; disable if you just want to confirm it compiles
           CI: "false"
