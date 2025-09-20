@@ -3,7 +3,7 @@
 // Website related settings
 const settings = {
   isSplash: true, // Change this to true if you want to use the splash screen.
-  useCustomCursor: false, // Change this to false if you want the good'ol cursor
+  useCustomCursor: true, // Change this to false if you want the good'ol cursor
   googleTrackingID: "",
 };
 
@@ -12,27 +12,24 @@ const greeting = {
   title: "Hello 👋.",
   title2: "Shane",
   logo_name: "Shane Buckley",
-  nickname: "shane / gonzo",
   full_name: "Shane Buckley",
   subTitle: "DevOps/Cloud/Software Engineer and AI Enthusiast!",
   resumeLink:
     "https://drive.google.com/file/d/1M0OmmFPnMYoeTYtSviaS672wmp9BXl7_/view?usp=sharing",
-  mail: "mailto:gonzosoftware0@gmail.com",
+  mail: "mailto:contact@shanebuckley.ie",
 };
 
 const socialMediaLinks = {
   /* Your Social Media Links */
   github: "https://github.com/GonzoTheDev",
-  linkedin: "https://www.linkedin.com/in/shane-wilson-dublin/",
-  gmail: "gonzosoftware0@gmail.com",
-  twitter: "https://twitter.com/GonzoTheDev",
-  instagram: "https://www.instagram.com/shaneb343/",
+  linkedin: "https://www.linkedin.com/in/shane-Buckley-dublin/",
+  gmail: "contact@shanebuckley.ie",
 };
 
 const skills = {
   data: [
     {
-      title: "DevOps Engineer",
+      title: "DevOps/Cloud/Software Engineer",
       fileName: "FullStackImg",
       skills: [
         "⚡ Design & build DevOps pipelines and workflow architectures with diagrams.",
