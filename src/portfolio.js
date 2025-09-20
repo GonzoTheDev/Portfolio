@@ -32,17 +32,16 @@ const skills = {
       title: "DevOps/Cloud/Software Engineer",
       fileName: "FullStackImg",
       skills: [
-        "⚡ Design & build DevOps pipelines and workflow architectures with diagrams.",
-        "⚡ Strong knowledge in version control systems such as Git.",
-        "⚡ Design & build cross-platform software applications.",
-        "⚡ CI/CD with tools such as Jenkins, Github Actions & Azure DevOps.",
-        "⚡ Experience with cloud platforms such as Azure DevOps, AWS, Google Cloud & Firebase.",
-        "⚡ Experienced in containerization tools such as Docker.",
-        "⚡ Knowledge of system and platform monitoring platforms Prometheus, Grafana & Backstage.",
-        "⚡ Proficient in the following languages: Python, Java, PHP, C, C#, Javascript, & Dart.",
-        "⚡ Experience with databases such as MySQL, PostgreSQL, MongoDB & Firebase Cloudstore.",
-        "⚡ Experience with frameworks such as ReactJS, Node.js, Express, Django, Flutter, .NET & more.",
-
+        "⚡ Design and implement DevOps pipelines and workflow architectures, supported by clear technical diagrams.",
+        "⚡ Proficient with version control systems, particularly Git and GitHub.",
+        "⚡ Develop and deploy cross-platform applications across web, mobile, and desktop.",
+        "⚡ Skilled in CI/CD using Jenkins, GitHub Actions, and Azure DevOps.",
+        "⚡ Hands-on experience with cloud platforms including Azure, AWS, GCP, and Firebase.",
+        "⚡ Experienced with containerization and orchestration using Docker (and Kubernetes).",
+        "⚡ Knowledge of monitoring and observability tools such as Prometheus, Grafana, and Backstage.",
+        "⚡ Proficient in programming languages: Python, Java, PHP, C, C#, JavaScript, and Dart.",
+        "⚡ Strong experience with relational and NoSQL databases: MySQL, PostgreSQL, MongoDB, and Firebase Cloudstore.",
+        "⚡ Practical expertise with modern frameworks and runtimes including ReactJS, Node.js, Express, Django, Flutter, and .NET.",
       ],
       softwareSkills: [
         {
