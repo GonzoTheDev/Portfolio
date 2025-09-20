@@ -30,7 +30,7 @@ jobs:
         run: npm ci
 
       # CRA treats CI=true as "fail on warnings".
-      # If you only want to verify it compiles, set CI=false.
+      # If you only want to verify it compiles, set CI=false. 
       - name: Build
         run: npm run build
         env:
