@@ -15,7 +15,7 @@ const greeting = {
   full_name: "Shane Buckley",
   subTitle: "DevOps/Cloud/Software Engineer and AI Enthusiast!",
   resumeLink:
-    "https://drive.google.com/file/d/1M0OmmFPnMYoeTYtSviaS672wmp9BXl7_/view?usp=sharing",
+    "https://drive.google.com/file/d/16bXILE70vzZdCFtab15q5Ic2cgbMUAKK/view?usp=drive_link",
   mail: "mailto:contact@shanebuckley.ie",
 };
 
