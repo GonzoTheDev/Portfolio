@@ -285,15 +285,28 @@ const skills = {
 const degrees = {
   degrees: [
     {
+      title: "Technological University of the Shannon - Athlone",
+      subtitle: "Master of Science, Software Design in Cloud Native Computing",
+      logo_path: "tus.png",
+      alt_name: "TUS",
+      duration: "2025 - Present",
+      descriptions: [
+        "⚡ Pursuing a master's degree in Software Design with a focus on Cloud Native Computing.",
+        "⚡ Studying core subjects like Object-Oriented Programming, Container Design & Deployment, Applied Scripting, and Cloud Infrastructure & Services.",
+        "⚡ Implemented several projects applying course concepts."
+      ],
+      website_link: "https://www.tus.ie/",
+    },
+    {
       title: "Technological University Dublin - Grangegorman",
       subtitle: "Bachelor of Science (Hons) in Computer Science - TU856",
       logo_path: "tud.png",
       alt_name: "TU Dublin",
-      duration: "2020 - Present",
+      duration: "2020 - 2024",
       descriptions: [
-        "⚡ I'm currently pursuing my bachelors degree in Computer Science.",
-        "⚡ I have studied core subjects like Data Structures, Algorithms, Web Development, Programming, Operating Systems, etc.",
-        "⚡ I have implemented several projects based on what I've learned in my course. ",
+        "⚡ Graduated with Second Class Honours, First Division in October 2024.",
+        "⚡ Studied core subjects including Data Structures, Algorithms, Web Development, Programming, and Operating Systems.",
+        "⚡ Completed multiple projects demonstrating practical application of coursework."
       ],
       website_link: "https://www.tudublin.ie/",
     },
@@ -303,7 +316,9 @@ const degrees = {
       logo_path: "plunket.png",
       alt_name: "PLUNKET",
       duration: "2010 - 2012",
-      descriptions: ["⚡ I completed my leaving certificate in 2012."],
+      descriptions: [
+        "⚡ Successfully completed the Leaving Certificate in 2012."
+      ],
       website_link: "https://www.plunketcollege.ie/",
     },
   ],
