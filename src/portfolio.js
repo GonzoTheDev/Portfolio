@@ -82,7 +82,7 @@ const skills = {
         },
         {
           skillName: "NodeJS",
-          fontAwesomeClassname: "logos:node-dot-js",
+          fontAwesomeClassname: "logos:nodejs",
           style: {
             color: "#339933",
           },
