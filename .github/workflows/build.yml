@@ -1,4 +1,4 @@
-name: Build (React)
+name: Build (Node 14.16.0)
 
 on:
   push:
@@ -14,11 +14,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # Prefer a single, stable Node for now; we can add a matrix later
-      - name: Setup Node.js 18 LTS
+      - name: Setup Node.js 14.16.0
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: '14.16.0'
+          check-latest: true
           cache: npm
           cache-dependency-path: package-lock.json
 
@@ -26,27 +26,12 @@ jobs:
         run: |
           node -v
           npm -v
-          if [ -f package.json ]; then
-            echo "=== engines from package.json ==="
-            node -e "try{console.log(require('./package.json').engines||{})}catch(e){console.log('no package.json?')}"
-          fi
-          if [ -f yarn.lock ]; then echo "Found yarn.lock (are you using Yarn?)"; fi
-          if [ ! -f package-lock.json ]; then echo "No package-lock.json found; npm ci will fail"; fi
+          test -f package-lock.json || (echo "package-lock.json is missing; npm ci will fail" && exit 1)
 
-      - name: Install deps (npm ci)
-        id: npminstall
-        run: |
-          set -e
-          npm ci --no-audit --no-fund || echo "npm_ci_failed=true" >> $GITHUB_OUTPUT
-
-      - name: Retry install with legacy peer deps (only if needed)
-        if: steps.npminstall.outputs.npm_ci_failed == 'true'
-        run: |
-          echo "Retrying with --legacy-peer-deps due to peer dependency conflicts..."
-          npm install --no-audit --no-fund --legacy-peer-deps
+      - name: Install dependencies
+        run: npm ci --no-audit --no-fund
 
       - name: Build
         run: npm run build
         env:
-          # For CRA, CI=true treats warnings as errors; disable if you just want to confirm it compiles
-          CI: "false"
+          CI: "false"   # prevents CRA from failing on warnings
