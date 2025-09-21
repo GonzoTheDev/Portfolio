@@ -6,7 +6,7 @@ export default function ExperienceImg(props) {
     <img
       src={serversImage}
       alt="Experience"
-      style={{ width: "100%", height: "auto" }}
+      style={{ width: "75%", height: "auto" }}
     />
   );
 }
