@@ -143,7 +143,7 @@ function Contact(props) {
                     e.preventDefault();
                     handleRequestCV();
                   }}
-                  className={`general-button ${buttonDisabled ? "disabled" : ""}`}
+                  className={`general-btn ${buttonDisabled ? "disabled" : ""}`}
                   href="#"
                   role="button"
                   aria-disabled={buttonDisabled}
