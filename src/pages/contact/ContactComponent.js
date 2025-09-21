@@ -140,7 +140,7 @@ function Contact(props) {
                 />
                 <button
                   onClick={handleRequestCV}
-                  className={`contact-cv-button ${buttonDisabled ? "disabled" : ""}`}
+                  className={`general-button ${buttonDisabled ? "disabled" : ""}`}
                   disabled={buttonDisabled}
                   title={isValidEmail(email) ? "" : "Enter a valid email address to enable"}
                 >
