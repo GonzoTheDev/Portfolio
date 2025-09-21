@@ -33,7 +33,9 @@
     "react-scripts": "^3.4.4",
     "styled-components": "^5.2.1",
     "styletron-engine-atomic": "^1.4.6",
-    "styletron-react": "^5.2.7"
+    "styletron-react": "^5.2.7",
+    "nodemailer": "^6.9.4",
+    "aws-sdk": "^2.1360.0"
   },
   "devDependencies": {
     "@iconify/icons-logos": "^1.1.5",
