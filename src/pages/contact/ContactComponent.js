@@ -138,14 +138,19 @@ function Contact(props) {
                   className="contact-email-input"
                   aria-label="Your email address to receive the full CV"
                 />
-                <button
-                  onClick={handleRequestCV}
+                <a
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleRequestCV();
+                  }}
                   className={`general-button ${buttonDisabled ? "disabled" : ""}`}
-                  disabled={buttonDisabled}
+                  href="#"
+                  role="button"
+                  aria-disabled={buttonDisabled}
                   title={isValidEmail(email) ? "" : "Enter a valid email address to enable"}
                 >
                   {status === "sending" ? "Sending…" : "Request Full CV"}
-                </button>
+                </a>
 
                 {status === "sent" && (
                   <p className="contact-status success" style={{ color: theme.success }}>
