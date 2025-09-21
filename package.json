@@ -1,8 +1,8 @@
 {
   "private": true,
   "name": "personalPortfolio",
-  "homepage": "https://shanewilson.ie",
   "version": "1.0.0",
+  "homepage": "https://shanewilson.ie",
   "scripts": {
     "build": "react-scripts build",
     "predeploy": "npm run build",
@@ -33,9 +33,7 @@
     "react-scripts": "^3.4.4",
     "styled-components": "^5.2.1",
     "styletron-engine-atomic": "^1.4.6",
-    "styletron-react": "^5.2.7",
-    "nodemailer": "^6.9.4",
-    "aws-sdk": "^2.1360.0"
+    "styletron-react": "^5.2.7"
   },
   "devDependencies": {
     "@iconify/icons-logos": "^1.1.5",
