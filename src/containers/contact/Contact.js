@@ -9,12 +9,12 @@ export default function Contact() {
 
   const handleRequestCV = async () => {
     const transporter = nodemailer.createTransport({
-      host: "email-smtp.eu-north-1.amazonaws.com", // Replace with your Amazon SES SMTP endpoint
+      host: "email-smtp.eu-north-1.amazonaws.com", 
       port: 587,
       secure: false, // true for 465, false for other ports
       auth: {
-        user: "AKIAW23DTS7EGHP6YMV2", // Replace with your Amazon SES SMTP username
-        pass: "BHFqbChHW8tpWkxoCDFdJA+YwuvIebxo2VgTbTCBqCLE", // Replace with your Amazon SES SMTP password
+        user: "AKIAW23DTS7EGHP6YMV2", 
+        pass: "BHFqbChHW8tpWkxoCDFdJA+YwuvIebxo2VgTbTCBqCLE", 
       },
     });
 
