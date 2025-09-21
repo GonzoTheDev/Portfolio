@@ -1,5 +1,5 @@
 import React from "react";
-import serversImage from "../assets/images/servers.jpg";
+import serversImage from "src/assests/images/servers.jpg";
 
 export default function ExperienceImg(props) {
   return (
