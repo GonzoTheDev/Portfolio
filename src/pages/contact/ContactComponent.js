@@ -11,7 +11,7 @@ import { style } from "glamor";
 const ContactData = contactPageData.contactSection;
 // const blogSection = contactPageData.blogSection; // unused
 
-// Prepare two contexts to handle both "assets" and the common "assests" folder name.
+// Prepare two contexts to handle both "assets" and the common "assets" folder name.
 // Webpack will include files matched by these contexts at build time.
 let imagesCtxPrimary = null;
 let imagesCtxAlt = null;
@@ -20,7 +20,7 @@ try {
   imagesCtxPrimary = require.context("../../assets/images", false, /\.(png|jpe?g|gif|svg|webp)$/i);
 } catch (_) {}
 try {
-  imagesCtxAlt = require.context("../../assests/images", false, /\.(png|jpe?g|gif|svg|webp)$/i);
+  imagesCtxAlt = require.context("../../assets/images", false, /\.(png|jpe?g|gif|svg|webp)$/i);
 } catch (_) {}
 
 // Helper to resolve a profile image path from ContactData with graceful fallback.
