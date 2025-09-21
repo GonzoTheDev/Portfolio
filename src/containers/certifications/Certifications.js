@@ -13,7 +13,7 @@ function Certifications(props) {
           <h1 className="certs-header" style={{ color: theme.text }}>
             Certifications
           </h1>
-          <h3>Working towards Microsoft Certified: Azure DevOps Engineer Expert.</h3>
+          <h3 className="center">Working towards Microsoft Certified: Azure DevOps Engineer Expert.</h3>
         </Fade>
       </div>
       <div className="certs-body-div">
