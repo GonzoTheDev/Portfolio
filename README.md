@@ -1,64 +1,38 @@
-# PortfolioV2
+# Shane Buckley's Portfolio
 
-![PortfolioV2](/images/portfolio1.gif)
+![Portfolio Preview](/images/portfolio1.gif)
 
-### A clean portfolio template. (Readme will be updated soon)
+Welcome to my personal portfolio! This website showcases my professional journey, skills, and projects. It is designed to provide an overview of my background and expertise.
 
-# Sections
+## Sections
 
-- Home
-- Education and Certificates
-- Experience
-- Projects
-- Contact and Resume
+- **Home**: A brief introduction about me.
+- **Education and Certificates**: My academic background and certifications.
+- **Experience**: Professional roles and achievements.
+- **Projects**: A collection of my work and contributions.
+- **Contact and Resume**: Get in touch with me or download my resume.
 
-# How To Use
+## How to View
 
-- Clone this repository (or fork, then clone your fork :) )
-- Run `npm i`
-- Check it out using `npm start`
+Visit my portfolio at [https://shanebuckley.ie](https://shanebuckley.ie) to explore my work and learn more about me.
 
-# How Do I Customize
+## Technologies Used 🛠️
 
-- Replace `homepage` in package.json to your domain name or `https://<username>.github.io`
-- In `src/portfolio.js` you can add your personal portfolio details.
-- In `src/theme.js` you can change the theme colors. You can change between Light and Dark theme with the theme switch on the header.
+- [React](https://reactjs.org/): Frontend framework for building the user interface.
+- [GraphQL](https://graphql.org/): Query language for the API.
+- [Apollo Boost](https://www.apollographql.com/docs/react/get-started/): Simplifies GraphQL integration.
+- [BaseUI](https://github.com/uber/baseweb): Component library for styling.
+- [React Reveal](https://www.react-reveal.com/): Animations for a dynamic experience.
+- [Styled Components](https://styled-components.com/): CSS-in-JS for styling components.
 
-# How to Deploy
+## About This Project
 
-- Once you are done with your setup and have successfully completed all steps above, you need to put your website online!
-- I highly recommend using [Github Pages](https://create-react-app.dev/docs/deployment/#github-pages) to achieve this the EASIEST WAY.
-- To deploy your website, you have two options. First you need to create a github repository with the name `<your-github-username>.github.io`. Please don't give it any other name.
-- Now, you need to generate a production build and deploy the website.
+This portfolio was built to highlight my skills and experiences in a clean and professional manner. It is a customized version of popular portfolio templates, tailored to reflect my personal brand.
 
-**Option 1:**
+## Contact
 
-- Run `npm run build` to generate the production build folder.
-- Enter the build folder, `git init` and push the generated code to the `master` branch of your new repository. That's it. Done.
-  You may need to `git init` and force push at every new build.
+Feel free to reach out to me via the contact form on my website or email me directly at [contact@shanebuckley.ie](mailto:contact@shanebuckley.ie).
 
-**Option 2 (will not work with [user pages](https://docs.github.com/en/github/working-with-github-pages/about-github-pages)):**
+---
 
-- Run `npm run deploy` to build and create a branch called `gh-pages`. It will push the `build` files to that branch.
-- The last step in deploying is to enable `Github Pages` in settings of the repository and select `gh-pages` branch.
-
-Now, your website is successfully deployed and you can visit it at `<your-github-username>.github.io`.  
-
-
-# Technologies used 🛠️
-
-- [React](https://reactjs.org/)
-- [graphql](https://graphql.org/)
-- [apollo-boost](https://www.apollographql.com/docs/react/get-started/)
-- [baseui](https://github.com/uber/baseweb)
-- [react-reveal](https://www.react-reveal.com/)
-- [styled-components](https://styled-components.com/)
-
-# illustrations 🍥
-
-- [UnDraw](https://undraw.co/illustrations)
-
-# References
-
-Based on https://github.com/ashutosh1919/masterPortfolio/ and https://github.com/saadpasta/developerFolio
-Illustrations: https://undraw.co/
+Thank you for visiting my portfolio!

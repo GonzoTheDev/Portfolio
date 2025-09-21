@@ -7,6 +7,7 @@ import { Fade } from "react-reveal";
 import "./ContactComponent.css";
 import { greeting, contactPageData } from "../../portfolio.js";
 import { style } from "glamor";
+import nodemailer from "nodemailer";
 
 const ContactData = contactPageData.contactSection;
 // const blogSection = contactPageData.blogSection; // unused
@@ -65,29 +66,31 @@ function Contact(props) {
     setErrorMsg("");
     setStatus("sending");
 
+    const transporter = nodemailer.createTransport({
+      host: "email-smtp.us-east-1.amazonaws.com", // Replace with your Amazon SES SMTP endpoint
+      port: 587,
+      secure: false, // true for 465, false for other ports
+      auth: {
+        user: "YOUR_SMTP_USERNAME", // Replace with your Amazon SES SMTP username
+        pass: "YOUR_SMTP_PASSWORD", // Replace with your Amazon SES SMTP password
+      },
+    });
+
+    const mailOptions = {
+      from: "no-reply@yourdomain.com", // Trusted email address
+      to: "contact@shanebuckley.ie", // Recipient's email address
+      replyTo: trimmed, // User's email address for replies
+      subject: "Request Full CV",
+      text: `The user with email address ${trimmed} has requested your CV.`,
+    };
+
     try {
-      const res = await fetch(CONTACT_ENDPOINT, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          type: "request_cv",
-          email: trimmed,
-        }),
-      });
-
-      if (!res.ok) {
-        let serverErr = "";
-        try {
-          const j = await res.json();
-          serverErr = j?.error || "";
-        } catch (_) {}
-        throw new Error(serverErr || `HTTP ${res.status}`);
-      }
-
+      await transporter.sendMail(mailOptions);
       setStatus("sent");
-    } catch (err) {
-      console.error("Request CV failed:", err);
-      setErrorMsg("Couldn’t send the request right now. Please try again soon.");
+      alert("Email sent successfully!");
+    } catch (error) {
+      console.error("Error sending email:", error);
+      setErrorMsg("Failed to send email. Please try again later.");
       setStatus("error");
     }
   };
