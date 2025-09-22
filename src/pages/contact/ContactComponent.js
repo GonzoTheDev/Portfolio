@@ -3,10 +3,9 @@ import React from "react";
 import Header from "../../components/header/Header";
 import Footer from "../../components/footer/Footer";
 import SocialMedia from "../../components/socialMedia/SocialMedia";
-import { Fade } from "react-reveal";
+import { gsap } from "gsap";
 import "./ContactComponent.css";
 import { greeting, contactPageData } from "../../portfolio.js";
-import { style } from "glamor";
 
 const ContactData = contactPageData.contactSection;
 // const blogSection = contactPageData.blogSection; // unused
@@ -92,84 +91,82 @@ function Contact(props) {
     }
   };
 
-  const styles = style({
-    backgroundColor: `${theme.accentBright}`,
-    ":hover": {
-      boxShadow: `0 5px 15px ${theme.accentBright}`,
-    },
-  });
-
   const profileImgSrc = resolveProfileImg(ContactData?.profile_image_path);
   const buttonDisabled = status === "sending" || !isValidEmail(email);
+
+  React.useEffect(() => {
+    gsap.from(".contact-heading-div", {
+      opacity: 0,
+      y: 40,
+      duration: 1,
+    });
+  }, []);
 
   return (
     <div className="contact-main">
       <Header theme={theme} setTheme={props.setTheme} />
       <div className="basic-contact">
-        <Fade bottom duration={1000} distance="40px">
-          <div className="contact-heading-div">
-            <div className="contact-heading-img-div">
-              <img className="profile-pic" src={profileImgSrc} alt="Profile" />
-            </div>
-
-            <div className="contact-heading-text-div">
-              <h1 className="contact-heading-text" style={{ color: theme.text }}>
-                {ContactData?.title}
-              </h1>
-
-              <p
-                className="contact-header-detail-text subTitle"
-                style={{ color: theme.secondaryText }}
-              >
-                {ContactData?.description}
-              </p>
-
-              <SocialMedia />
-              <br />
-              <br />
-
-              {/* Request CV flow */}
-              <div className="contact-cv-request">
-                <input
-                  type="email"
-                  placeholder="Your Email Address"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  className="contact-email-input"
-                  aria-label="Your email address to receive the full CV"
-                />
-                <a
-                  onClick={(e) => {
-                    e.preventDefault();
-                    handleRequestCV();
-                  }}
-                  className={`general-btn ${buttonDisabled ? "disabled" : ""}`}
-                  href="#"
-                  role="button"
-                  aria-disabled={buttonDisabled}
-                  title={isValidEmail(email) ? "" : "Enter a valid email address to enable"}
-                >
-                  {status === "sending" ? "Sending…" : "Request Full CV"}
-                </a>
-
-                {status === "sent" && (
-                  <p className="contact-status success" style={{ color: theme.success }}>
-                    Thanks! I’ll email you the CV shortly.
-                  </p>
-                )}
-                {errorMsg && (
-                  <p className="contact-status error" style={{ color: theme.error }}>
-                    {errorMsg}
-                  </p>
-                )}
-              </div>
-
-              <br />
-              <br />
-            </div>
+        <div className="contact-heading-div">
+          <div className="contact-heading-img-div">
+            <img className="profile-pic" src={profileImgSrc} alt="Profile" />
           </div>
-        </Fade>
-        <Fade bottom duration={1000} distance="40px"></Fade>
+
+          <div className="contact-heading-text-div">
+            <h1 className="contact-heading-text" style={{ color: theme.text }}>
+              {ContactData?.title}
+            </h1>
+
+            <p
+              className="contact-header-detail-text subTitle"
+              style={{ color: theme.secondaryText }}
+            >
+              {ContactData?.description}
+            </p>
+
+            <SocialMedia />
+            <br />
+            <br />
+
+            {/* Request CV flow */}
+            <div className="contact-cv-request">
+              <input
+                type="email"
+                placeholder="Your Email Address"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className="contact-email-input"
+                aria-label="Your email address to receive the full CV"
+              />
+              <a
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleRequestCV();
+                }}
+                className={`general-btn ${buttonDisabled ? "disabled" : ""}`}
+                href="#"
+                role="button"
+                aria-disabled={buttonDisabled}
+                title={isValidEmail(email) ? "" : "Enter a valid email address to enable"}
+              >
+                {status === "sending" ? "Sending…" : "Request Full CV"}
+              </a>
+
+              {status === "sent" && (
+                <p className="contact-status success" style={{ color: theme.success }}>
+                  Thanks! I’ll email you the CV shortly.
+                </p>
+              )}
+              {errorMsg && (
+                <p className="contact-status error" style={{ color: theme.error }}>
+                  {errorMsg}
+                </p>
+              )}
+            </div>
+
+            <br />
+            <br />
+          </div>
+        </div>
       </div>
       <Footer theme={props.theme} onToggle={props.onToggle} />
     </div>

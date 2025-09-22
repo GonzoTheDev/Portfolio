@@ -2,7 +2,7 @@ import React from "react";
 import "./Skills.css";
 import SoftwareSkill from "../../components/softwareSkills/SoftwareSkill";
 import { skills } from "../../portfolio";
-import { Fade } from "react-reveal";
+import { gsap } from "gsap";
 import FullStackImg from "./FullStackImg";
 import CloudInfraImg from "./CloudInfraImg";
 // import DesignImg from "./DesignImg";
@@ -17,41 +17,43 @@ function GetSkillSvg(props) {
 
 function SkillSection(props) {
   const theme = props.theme;
+
+  React.useEffect(() => {
+    gsap.from(".skills-main-div", {
+      opacity: 0,
+      x: -20,
+      duration: 2,
+      stagger: 0.3,
+    });
+  }, []);
+
   return (
     <div>
       {skills.data.map((skill, index) => {
         if (index % 2 === 0) {
           return (
             <div className="skills-main-div">
-              <Fade left duration={2000}>
-                <div className="skills-image-div">
-                  <GetSkillSvg fileName={skill.fileName} theme={theme} />
-                </div>
-              </Fade>
+              <div className="skills-image-div">
+                <GetSkillSvg fileName={skill.fileName} theme={theme} />
+              </div>
 
               <div className="skills-text-div">
-                <Fade right duration={1000}>
-                  <h1 className="skills-heading" style={{ color: theme.text }}>
-                    {skill.title}
-                  </h1>
-                </Fade>
-                <Fade right duration={1500}>
-                  <SoftwareSkill logos={skill.softwareSkills} />
-                </Fade>
-                <Fade right duration={2000}>
-                  <div>
-                    {skill.skills.map((skillSentence) => {
-                      return (
-                        <p
-                          className="subTitle skills-text"
-                          style={{ color: theme.secondaryText }}
-                        >
-                          {skillSentence}
-                        </p>
-                      );
-                    })}
-                  </div>
-                </Fade>
+                <h1 className="skills-heading" style={{ color: theme.text }}>
+                  {skill.title}
+                </h1>
+                <SoftwareSkill logos={skill.softwareSkills} />
+                <div>
+                  {skill.skills.map((skillSentence) => {
+                    return (
+                      <p
+                        className="subTitle skills-text"
+                        style={{ color: theme.secondaryText }}
+                      >
+                        {skillSentence}
+                      </p>
+                    );
+                  })}
+                </div>
               </div>
             </div>
           );
@@ -59,34 +61,26 @@ function SkillSection(props) {
           return (
             <div className="skills-main-div">
               <div className="skills-text-div">
-                <Fade left duration={1000}>
-                  <h1 className="skills-heading" style={{ color: theme.text }}>
-                    {skill.title}
-                  </h1>
-                </Fade>
-                <Fade left duration={1500}>
-                  <SoftwareSkill logos={skill.softwareSkills} />
-                </Fade>
-                <Fade left duration={2000}>
-                  <div>
-                    {skill.skills.map((skillSentence) => {
-                      return (
-                        <p
-                          className="subTitle skills-text"
-                          style={{ color: theme.secondaryText }}
-                        >
-                          {skillSentence}
-                        </p>
-                      );
-                    })}
-                  </div>
-                </Fade>
-              </div>
-              <Fade right duration={2000}>
-                <div className="skills-image-div">
-                  <GetSkillSvg fileName={skill.fileName} theme={theme} />
+                <h1 className="skills-heading" style={{ color: theme.text }}>
+                  {skill.title}
+                </h1>
+                <SoftwareSkill logos={skill.softwareSkills} />
+                <div>
+                  {skill.skills.map((skillSentence) => {
+                    return (
+                      <p
+                        className="subTitle skills-text"
+                        style={{ color: theme.secondaryText }}
+                      >
+                        {skillSentence}
+                      </p>
+                    );
+                  })}
                 </div>
-              </Fade>
+              </div>
+              <div className="skills-image-div">
+                <GetSkillSvg fileName={skill.fileName} theme={theme} />
+              </div>
             </div>
           );
         }
