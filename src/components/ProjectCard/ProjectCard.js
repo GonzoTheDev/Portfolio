@@ -1,17 +1,8 @@
 import React from "react";
 import ProjectLanguages from "../projectLanguages/ProjectLanguages";
 import "./ProjectCard.css";
-import { gsap } from "gsap";
 
 export default function ProjectCard({ repo, theme }) {
-  React.useEffect(() => {
-    gsap.from(".repo-name-div", {
-      opacity: 0,
-      y: 40,
-      duration: 2,
-    });
-  }, []);
-
   function openRepoinNewTab(url) {
     var win = window.open(url, "_blank");
     win.focus();
