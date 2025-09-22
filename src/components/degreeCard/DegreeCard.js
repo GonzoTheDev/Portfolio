@@ -22,12 +22,40 @@ const StyledImg = styled.img`
   }
 `;
 
+const AnimatedDiv = styled.div`
+  animation: fadeIn 2s ease-in-out 0s 1 both;
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+`;
+
+const AnimatedCardBody = styled.div`
+  animation: fadeIn 2s ease-in-out 0s 1 both;
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+`;
+
 function DegreeCard(props) {
   const degree = props.degree;
   const theme = props.theme;
 
   return (
-    <div className="degree-card">
+    <AnimatedDiv className="degree-card">
       <div>
         <StyledImg
           src={require(`../../assets/images/${degree.logo_path}`)}
@@ -35,8 +63,9 @@ function DegreeCard(props) {
           theme={theme}
         />
       </div>
-      <div
+      <AnimatedCardBody
         className="card-body"
+        theme={theme}
         style={{
           borderBottom: `1px solid ${theme.accentColor}`,
           borderLeft: `1px solid ${theme.accentColor}`,
@@ -66,7 +95,7 @@ function DegreeCard(props) {
             </h3>
           </div>
         </div>
-        <div classname="body-content">
+        <div className="body-content">
           {degree.descriptions.map((sentence) => {
             return (
               <p className="content-list" style={{ color: theme.text }}>
@@ -91,6 +120,7 @@ function DegreeCard(props) {
                 borderRadius: "4px",
                 borderWidth: "0px",
                 marginBottom: "20px",
+                marginRight: "20px",
                 width: "200px",
                 height: "50px",
                 fontWeight: "bold",
@@ -108,8 +138,8 @@ function DegreeCard(props) {
             </p>
           </a>
         </div>
-      </div>
-    </div>
+      </AnimatedCardBody>
+    </AnimatedDiv>
   );
 }
 

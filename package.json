@@ -2,7 +2,7 @@
   "private": true,
   "name": "personal-portfolio",
   "version": "1.0.0",
-  "homepage": "https://shanewilson.ie",
+  "homepage": "https://shanebuckley.ie",
   "scripts": {
     "build": "react-scripts build",
     "predeploy": "npm run build",
