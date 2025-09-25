@@ -181,42 +181,75 @@
   color: #ffffff !important;
 }
 
-/* 48em = 768px */
+/* Force static header and neutralize any fixed/auto-hide remnants */
+.header-container { position: static !important; width: 100%; }
+.header-hidden { transform: none !important; }
+.header-container .header { box-shadow: none !important; }
 
-@media (min-width: 48em) {
-  .header li {
-    float: left;
-  }
+/* Desktop layout: prevent wrapping and normalize spacing */
+@media (min-width: 1024px) {
   .header {
+    max-width: 1200px;      /* consistent container width */
+    width: 100%;
+    margin: 0 auto;         /* centered */
+    padding: 16px 24px;     /* consistent vertical/horizontal padding */
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between; /* logo left, nav right */
   }
-  .header .menu {
-    max-height: none;
-  }
-  .header .menu-icon {
-    display: none;
-  }
-}
 
-@media (max-width: 768px) {
   .header .logo {
-    display: block;
-    float: left;
-    font-size: 1.25em;
-    text-decoration: none;
-    margin-top: 15px;
-    line-height: normal;
+    float: none;            /* disable floats */
+    display: flex;          /* center within header height */
+    align-items: center;
+    margin-top: 0;          /* remove per-page drift */
+    line-height: 1.2;
   }
+  .header .logo-name { white-space: nowrap; }
 
-  .header {
-    padding-top: 10px;
-    text-align: center;
+  .header ul.menu {
+    display: flex;          /* horizontal layout */
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: nowrap;      /* no wrapping */
+    white-space: nowrap;    /* keep items on one line */
+    gap: 10px;              /* even spacing */
+    margin: 0;              /* reset */
+    padding: 0;             /* reset */
+    clear: none;            /* neutralize */
+    max-height: none;       /* fully visible on desktop */
   }
+  .header ul.menu li { float: none; display: inline-flex; }
+  .header ul.menu a { white-space: nowrap; margin: 0; padding: 8px 12px; }
+
+  /* Override page-specific margins that caused vertical drift */
+  .homei, .ec, .xp, .projects, .cr { margin: 0 !important; }
+
+  /* Hide burger on desktop */
+  .header .menu-icon { display: none !important; }
 }
-@media (max-width: 960px) and (min-width: 768px) {
-  .header {
-    font-size: 12px;
-  }
+
+/* Final desktop anti-wrap + layout hardening */
+@media (min-width: 1024px) {
+  /* Neutralize legacy rules that caused drift/wrapping */
+  .header ul { overflow: visible !important; }
+  .header li { float: none !important; }
+
+  /* Flex behavior: logo fixed size, menu takes remaining space */
+  .header .logo { flex: 0 0 auto; }
+  .header ul.menu { flex: 1 1 auto; min-width: 0; justify-content: flex-end; }
+
+  /* Absolutely prevent wrapping */
+  .header .logo-name { white-space: nowrap !important; }
+  .header ul.menu a { white-space: nowrap !important; padding: 6px 10px; }
+
+  /* Keep spacing compact to avoid forced wraps on narrower desktops */
+  .header { gap: 12px; }
+  .header ul.menu { gap: 8px; }
+}
+
+/* Tablet & down: keep mobile behavior but with tidy spacing */
+@media (max-width: 1023.98px) {
+  .header { width: 100%; margin: 0; padding: 12px 14px; }
+  .header ul.menu { margin: 0; padding: 10px 0; }
 }

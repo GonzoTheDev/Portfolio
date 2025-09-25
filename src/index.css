@@ -76,3 +76,7 @@ body {
     line-height: normal;
   }
 }
+/* remove reserved space for fixed header */
+:root{ --site-header-height: 0px; }
+body{ padding-top: 0; }
+@media (max-width:768px){ :root{ --site-header-height:0px; } }
