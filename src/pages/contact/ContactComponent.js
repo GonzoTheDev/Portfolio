@@ -5,24 +5,29 @@ import Footer from "../../components/footer/Footer";
 import SocialMedia from "../../components/socialMedia/SocialMedia";
 import { gsap } from "gsap";
 import "./ContactComponent.css";
-import { greeting, contactPageData } from "../../portfolio.js";
+import { contactPageData } from "../../portfolio.js";
 
 const ContactData = contactPageData.contactSection;
-// const blogSection = contactPageData.blogSection; // unused
 
-// Prepare two contexts to handle both "assets" and the common "assets" folder name.
-// Webpack will include files matched by these contexts at build time.
+// Try both "assets" and the common misspelling "assests"
 let imagesCtxPrimary = null;
 let imagesCtxAlt = null;
 
 try {
-  imagesCtxPrimary = require.context("../../assets/images", false, /\.(png|jpe?g|gif|svg|webp)$/i);
+  imagesCtxPrimary = require.context(
+    "../../assets/images",
+    false,
+    /\.(png|jpe?g|gif|svg|webp)$/i
+  );
 } catch (_) {}
 try {
-  imagesCtxAlt = require.context("../../assets/images", false, /\.(png|jpe?g|gif|svg|webp)$/i);
+  imagesCtxAlt = require.context(
+    "../../assests/images",
+    false,
+    /\.(png|jpe?g|gif|svg|webp)$/i
+  );
 } catch (_) {}
 
-// Helper to resolve a profile image path from ContactData with graceful fallback.
 function resolveProfileImg(filename) {
   const safeName = (filename || "").replace(/^\.?\//, "");
   const candidates = [
@@ -31,17 +36,17 @@ function resolveProfileImg(filename) {
     { ctx: imagesCtxPrimary, path: "./defaultProfile.png" },
     { ctx: imagesCtxAlt, path: "./defaultProfile.png" },
   ];
-
   for (const c of candidates) {
     try {
       if (c.ctx) return c.ctx(c.path);
-    } catch (_) {
-      // continue
-    }
+    } catch (_) {}
   }
-  // Final ultra-safe fallback: empty data URL (prevents broken <img>)
   return "data:image/gif;base64,R0lGODlhAQABAAAAACw=";
 }
+
+const TURNSTILE_SITEKEY = process.env.REACT_APP_TURNSTILE_SITEKEY;
+const CONTACT_ENDPOINT =
+  process.env.REACT_APP_CONTACT_ENDPOINT || "/api/contact";
 
 function Contact(props) {
   const theme = props.theme;
@@ -50,14 +55,76 @@ function Contact(props) {
   const [status, setStatus] = React.useState("idle"); // idle | sending | sent | error
   const [errorMsg, setErrorMsg] = React.useState("");
 
-  const CONTACT_ENDPOINT = process.env.REACT_APP_CONTACT_ENDPOINT || "/api/contact";
+  // Bot controls
+  const [token, setToken] = React.useState("");
+  const [honeypot, setHoneypot] = React.useState(""); // must stay empty
+  const widgetRef = React.useRef(null);
+  const [widgetId, setWidgetId] = React.useState(null);
 
   const isValidEmail = (val) => /^\S+@\S+\.\S+$/.test(String(val || "").trim());
+  const profileImgSrc = resolveProfileImg(ContactData?.profile_image_path);
 
-  const handleRequestCV = async () => {
+  // Animate in
+  React.useEffect(() => {
+    gsap.from(".contact-heading-div", { opacity: 0, y: 40, duration: 1 });
+  }, []);
+
+  // Load Turnstile script if not already present, then render widget
+  React.useEffect(() => {
+    function renderWidget() {
+      if (!window.turnstile || !widgetRef.current || !TURNSTILE_SITEKEY) return;
+      const id = window.turnstile.render(widgetRef.current, {
+        sitekey: TURNSTILE_SITEKEY,
+        callback: (t) => setToken(t),
+      });
+      setWidgetId(id);
+    }
+
+    if (window.turnstile) {
+      renderWidget();
+      return;
+    }
+
+    // Inject script dynamically (safe even if you also added it in index.html)
+    const existing = document.querySelector(
+      'script[src^="https://challenges.cloudflare.com/turnstile"]'
+    );
+    if (existing) {
+      const i = setInterval(() => {
+        if (window.turnstile) {
+          clearInterval(i);
+          renderWidget();
+        }
+      }, 200);
+      return;
+    }
+
+    const s = document.createElement("script");
+    s.src = "https://challenges.cloudflare.com/turnstile/v0/api.js";
+    s.async = true;
+    s.defer = true;
+    s.onload = renderWidget;
+    document.head.appendChild(s);
+  }, []);
+
+  async function handleRequestCV(e) {
+    e.preventDefault();
+
     const trimmed = email.trim();
     if (!isValidEmail(trimmed)) {
       setErrorMsg("Enter a valid email address.");
+      return;
+    }
+    if (!TURNSTILE_SITEKEY) {
+      setErrorMsg("Verification not configured. Please try again later.");
+      return;
+    }
+    if (!token) {
+      setErrorMsg("Please complete the verification.");
+      return;
+    }
+    if (honeypot) {
+      // Silent drop if bots filled the hidden field
       return;
     }
 
@@ -71,6 +138,8 @@ function Contact(props) {
         body: JSON.stringify({
           type: "request_cv",
           email: trimmed,
+          token,
+          website: honeypot, // honeypot field name expected by server
         }),
       });
 
@@ -88,19 +157,17 @@ function Contact(props) {
       console.error("Request CV failed:", err);
       setErrorMsg("Couldn’t send the request right now. Please try again soon.");
       setStatus("error");
+    } finally {
+      // Reset the widget for another try
+      try {
+        if (window.turnstile && widgetId) window.turnstile.reset(widgetId);
+      } catch (_) {}
+      setToken("");
     }
-  };
+  }
 
-  const profileImgSrc = resolveProfileImg(ContactData?.profile_image_path);
-  const buttonDisabled = status === "sending" || !isValidEmail(email);
-
-  React.useEffect(() => {
-    gsap.from(".contact-heading-div", {
-      opacity: 0,
-      y: 40,
-      duration: 1,
-    });
-  }, []);
+  const buttonDisabled =
+    status === "sending" || !isValidEmail(email) || !token || !!honeypot;
 
   return (
     <div className="contact-main">
@@ -128,7 +195,7 @@ function Contact(props) {
             <br />
 
             {/* Request CV flow */}
-            <div className="contact-cv-request">
+            <form onSubmit={handleRequestCV} className="contact-cv-request">
               <input
                 type="email"
                 placeholder="Your Email Address"
@@ -136,17 +203,48 @@ function Contact(props) {
                 onChange={(e) => setEmail(e.target.value)}
                 className="contact-email-input"
                 aria-label="Your email address to receive the full CV"
+                autoComplete="email"
               />
+
+              {/* Honeypot: visually hidden but focusable by bots */}
+              <input
+                type="text"
+                name="website"
+                value={honeypot}
+                onChange={(e) => setHoneypot(e.target.value)}
+                tabIndex={-1}
+                autoComplete="off"
+                aria-hidden="true"
+                style={{
+                  position: "absolute",
+                  left: "-10000px",
+                  height: 0,
+                  width: 0,
+                  opacity: 0,
+                }}
+              />
+
+              {/* Turnstile container */}
+              <div ref={widgetRef} style={{ marginTop: 8, marginBottom: 8 }} />
+
+              {/* Using anchor styled as button to match your theme */}
               <a
                 onClick={(e) => {
                   e.preventDefault();
-                  handleRequestCV();
+                  if (!buttonDisabled) handleRequestCV(e);
                 }}
                 className={`general-btn ${buttonDisabled ? "disabled" : ""}`}
                 href="#"
                 role="button"
                 aria-disabled={buttonDisabled}
-                title={isValidEmail(email) ? "" : "Enter a valid email address to enable"}
+                title={
+                  isValidEmail(email)
+                    ? token
+                      ? ""
+                      : "Complete the verification to enable"
+                    : "Enter a valid email address to enable"
+                }
+                style={buttonDisabled ? { pointerEvents: "none" } : undefined}
               >
                 {status === "sending" ? "Sending…" : "Request Full CV"}
               </a>
@@ -161,7 +259,7 @@ function Contact(props) {
                   {errorMsg}
                 </p>
               )}
-            </div>
+            </form>
 
             <br />
             <br />
